@@ -15,6 +15,18 @@
 		446899831D0D886F00CD573B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446899811D0D886F00CD573B /* LaunchScreen.storyboard */; };
 		4468998E1D0D886F00CD573B /* BabyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4468998D1D0D886F00CD573B /* BabyTrackerTests.m */; };
 		446899991D0D886F00CD573B /* BabyTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899981D0D886F00CD573B /* BabyTrackerUITests.m */; };
+		44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF081D15329800C12DE4 /* MainScreenViewController.m */; };
+		44D6AF0B1D15329800C12DE4 /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF091D15329800C12DE4 /* MainScreenViewController.xib */; };
+		44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF0D1D1532B900C12DE4 /* AddChildViewController.m */; };
+		44D6AF101D1532B900C12DE4 /* AddChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF0E1D1532B900C12DE4 /* AddChildViewController.xib */; };
+		44D6AF141D15331800C12DE4 /* SleepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF121D15331800C12DE4 /* SleepViewController.m */; };
+		44D6AF151D15331800C12DE4 /* SleepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF131D15331800C12DE4 /* SleepViewController.xib */; };
+		44D6AF1A1D15337E00C12DE4 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF181D15337E00C12DE4 /* FeedViewController.m */; };
+		44D6AF1B1D15337E00C12DE4 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF191D15337E00C12DE4 /* FeedViewController.xib */; };
+		44D6AF1F1D1533AF00C12DE4 /* StrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF1D1D1533AF00C12DE4 /* StrollViewController.m */; };
+		44D6AF201D1533AF00C12DE4 /* StrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF1E1D1533AF00C12DE4 /* StrollViewController.xib */; };
+		44D6AF241D1533F900C12DE4 /* MedicalCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF221D1533F900C12DE4 /* MedicalCardViewController.m */; };
+		44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,24 @@
 		446899941D0D886F00CD573B /* BabyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446899981D0D886F00CD573B /* BabyTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTrackerUITests.m; sourceTree = "<group>"; };
 		4468999A1D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44D6AF071D15329800C12DE4 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
+		44D6AF081D15329800C12DE4 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
+		44D6AF091D15329800C12DE4 /* MainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
+		44D6AF0C1D1532B900C12DE4 /* AddChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChildViewController.h; sourceTree = "<group>"; };
+		44D6AF0D1D1532B900C12DE4 /* AddChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChildViewController.m; sourceTree = "<group>"; };
+		44D6AF0E1D1532B900C12DE4 /* AddChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddChildViewController.xib; sourceTree = "<group>"; };
+		44D6AF111D15331800C12DE4 /* SleepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepViewController.h; sourceTree = "<group>"; };
+		44D6AF121D15331800C12DE4 /* SleepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepViewController.m; sourceTree = "<group>"; };
+		44D6AF131D15331800C12DE4 /* SleepViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepViewController.xib; sourceTree = "<group>"; };
+		44D6AF171D15337E00C12DE4 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		44D6AF181D15337E00C12DE4 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		44D6AF191D15337E00C12DE4 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		44D6AF1C1D1533AF00C12DE4 /* StrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrollViewController.h; sourceTree = "<group>"; };
+		44D6AF1D1D1533AF00C12DE4 /* StrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrollViewController.m; sourceTree = "<group>"; };
+		44D6AF1E1D1533AF00C12DE4 /* StrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrollViewController.xib; sourceTree = "<group>"; };
+		44D6AF211D1533F900C12DE4 /* MedicalCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalCardViewController.h; sourceTree = "<group>"; };
+		44D6AF221D1533F900C12DE4 /* MedicalCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalCardViewController.m; sourceTree = "<group>"; };
+		44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalCardViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +135,7 @@
 				446899771D0D886F00CD573B /* AppDelegate.m */,
 				446899791D0D886F00CD573B /* ViewController.h */,
 				4468997A1D0D886F00CD573B /* ViewController.m */,
+				44D6AF161D15332A00C12DE4 /* ViewControllers */,
 				4468997C1D0D886F00CD573B /* Main.storyboard */,
 				4468997F1D0D886F00CD573B /* Assets.xcassets */,
 				446899811D0D886F00CD573B /* LaunchScreen.storyboard */,
@@ -138,6 +169,79 @@
 				4468999A1D0D886F00CD573B /* Info.plist */,
 			);
 			path = BabyTrackerUITests;
+			sourceTree = "<group>";
+		};
+		44D6AF161D15332A00C12DE4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF261D15340200C12DE4 /* MainScreen */,
+				44D6AF271D15340C00C12DE4 /* AddChild */,
+				44D6AF281D15341800C12DE4 /* Sleep */,
+				44D6AF291D15341F00C12DE4 /* Feed */,
+				44D6AF2A1D15342500C12DE4 /* Stroll */,
+				44D6AF2B1D15342C00C12DE4 /* MedicalCard */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44D6AF261D15340200C12DE4 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF071D15329800C12DE4 /* MainScreenViewController.h */,
+				44D6AF081D15329800C12DE4 /* MainScreenViewController.m */,
+				44D6AF091D15329800C12DE4 /* MainScreenViewController.xib */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
+		44D6AF271D15340C00C12DE4 /* AddChild */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF0C1D1532B900C12DE4 /* AddChildViewController.h */,
+				44D6AF0D1D1532B900C12DE4 /* AddChildViewController.m */,
+				44D6AF0E1D1532B900C12DE4 /* AddChildViewController.xib */,
+			);
+			name = AddChild;
+			sourceTree = "<group>";
+		};
+		44D6AF281D15341800C12DE4 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF111D15331800C12DE4 /* SleepViewController.h */,
+				44D6AF121D15331800C12DE4 /* SleepViewController.m */,
+				44D6AF131D15331800C12DE4 /* SleepViewController.xib */,
+			);
+			name = Sleep;
+			sourceTree = "<group>";
+		};
+		44D6AF291D15341F00C12DE4 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF171D15337E00C12DE4 /* FeedViewController.h */,
+				44D6AF181D15337E00C12DE4 /* FeedViewController.m */,
+				44D6AF191D15337E00C12DE4 /* FeedViewController.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		44D6AF2A1D15342500C12DE4 /* Stroll */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF1C1D1533AF00C12DE4 /* StrollViewController.h */,
+				44D6AF1D1D1533AF00C12DE4 /* StrollViewController.m */,
+				44D6AF1E1D1533AF00C12DE4 /* StrollViewController.xib */,
+			);
+			name = Stroll;
+			sourceTree = "<group>";
+		};
+		44D6AF2B1D15342C00C12DE4 /* MedicalCard */ = {
+			isa = PBXGroup;
+			children = (
+				44D6AF211D1533F900C12DE4 /* MedicalCardViewController.h */,
+				44D6AF221D1533F900C12DE4 /* MedicalCardViewController.m */,
+				44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */,
+			);
+			name = MedicalCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +347,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D6AF201D1533AF00C12DE4 /* StrollViewController.xib in Resources */,
 				446899831D0D886F00CD573B /* LaunchScreen.storyboard in Resources */,
+				44D6AF0B1D15329800C12DE4 /* MainScreenViewController.xib in Resources */,
+				44D6AF1B1D15337E00C12DE4 /* FeedViewController.xib in Resources */,
+				44D6AF101D1532B900C12DE4 /* AddChildViewController.xib in Resources */,
 				446899801D0D886F00CD573B /* Assets.xcassets in Resources */,
+				44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */,
+				44D6AF151D15331800C12DE4 /* SleepViewController.xib in Resources */,
 				4468997E1D0D886F00CD573B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +380,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D6AF1F1D1533AF00C12DE4 /* StrollViewController.m in Sources */,
+				44D6AF141D15331800C12DE4 /* SleepViewController.m in Sources */,
 				4468997B1D0D886F00CD573B /* ViewController.m in Sources */,
+				44D6AF1A1D15337E00C12DE4 /* FeedViewController.m in Sources */,
+				44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */,
+				44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */,
+				44D6AF241D1533F900C12DE4 /* MedicalCardViewController.m in Sources */,
 				446899781D0D886F00CD573B /* AppDelegate.m in Sources */,
 				446899751D0D886F00CD573B /* main.m in Sources */,
 			);
@@ -496,6 +612,7 @@
 				4468999F1D0D886F00CD573B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		446899A01D0D886F00CD573B /* Build configuration list for PBXNativeTarget "BabyTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +621,7 @@
 				446899A21D0D886F00CD573B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		446899A31D0D886F00CD573B /* Build configuration list for PBXNativeTarget "BabyTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +630,7 @@
 				446899A51D0D886F00CD573B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
