@@ -7,14 +7,97 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StrollViewController">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="timerLabel" destination="rX4-X9-ET4" id="saM-zd-KmZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ufs-yR-kos">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJf-Vv-Dw0">
+                    <rect key="frame" x="30" y="120" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="XRQ-Cz-6OR"/>
+                        <constraint firstAttribute="width" constant="90" id="vMd-w6-Qjq"/>
+                    </constraints>
+                    <state key="normal" title="Go out"/>
+                    <connections>
+                        <action selector="goOutActionButton:" destination="-1" eventType="touchUpInside" id="aqu-34-sgZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ5-X1-Wvs">
+                    <rect key="frame" x="200" y="120" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="J93-Lc-oRf"/>
+                        <constraint firstAttribute="height" constant="90" id="m3d-te-hLa"/>
+                    </constraints>
+                    <state key="normal" title="Came from"/>
+                    <connections>
+                        <action selector="cameFromActionButton:" destination="-1" eventType="touchUpInside" id="3Mg-ff-odo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-5l-hZF">
+                    <rect key="frame" x="120" y="408" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="JBg-OJ-JjX"/>
+                        <constraint firstAttribute="height" constant="40" id="z86-nj-roi"/>
+                    </constraints>
+                    <state key="normal" title="Add stroll"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-Ll-FzQ">
+                    <rect key="frame" x="40" y="478" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="I2Q-48-RaP"/>
+                        <constraint firstAttribute="height" constant="50" id="zLs-0a-L88"/>
+                    </constraints>
+                    <state key="normal" title="List"/>
+                    <connections>
+                        <action selector="strollListActionButton:" destination="-1" eventType="touchUpInside" id="nTY-oP-MYJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-ym-iU5">
+                    <rect key="frame" x="230" y="478" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="G8d-LZ-H4f"/>
+                        <constraint firstAttribute="width" constant="50" id="fSb-Bh-HXV"/>
+                    </constraints>
+                    <state key="normal" title="Timer"/>
+                    <connections>
+                        <action selector="strollTimerActionButton:" destination="-1" eventType="touchUpInside" id="7OV-ON-zIc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time from start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-X9-ET4">
+                    <rect key="frame" x="35" y="234" width="250" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="ccF-hY-zhp"/>
+                        <constraint firstAttribute="width" constant="250" id="lqm-wH-zkD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fJT-5l-hZF" secondAttribute="trailing" constant="120" id="2s0-2e-0jx"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="centerY" secondItem="ufs-yR-kos" secondAttribute="centerY" id="H4V-t5-5do"/>
+                <constraint firstAttribute="bottom" secondItem="fJT-5l-hZF" secondAttribute="bottom" constant="120" id="HaJ-fO-4MZ"/>
+                <constraint firstAttribute="trailing" secondItem="cfP-ym-iU5" secondAttribute="trailing" constant="40" id="Hpt-UB-TFc"/>
+                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="30" id="Is7-T6-cMC"/>
+                <constraint firstItem="UmU-Ll-FzQ" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="40" id="N49-MV-eer"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="NvV-vB-xFa"/>
+                <constraint firstItem="kJ5-X1-Wvs" firstAttribute="top" secondItem="ufs-yR-kos" secondAttribute="top" constant="120" id="Vhm-Jv-Jyc"/>
+                <constraint firstAttribute="bottom" secondItem="cfP-ym-iU5" secondAttribute="bottom" constant="40" id="bud-Io-9Xb"/>
+                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="top" secondItem="ufs-yR-kos" secondAttribute="top" constant="120" id="cod-nR-wCa"/>
+                <constraint firstItem="fJT-5l-hZF" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="120" id="eHz-DV-R9i"/>
+                <constraint firstAttribute="trailing" secondItem="rX4-X9-ET4" secondAttribute="trailing" constant="35" id="oer-vb-mjd"/>
+                <constraint firstAttribute="trailing" secondItem="kJ5-X1-Wvs" secondAttribute="trailing" constant="30" id="pRD-VW-xOi"/>
+                <constraint firstAttribute="bottom" secondItem="UmU-Ll-FzQ" secondAttribute="bottom" constant="40" id="twS-fA-UVH"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

@@ -1,22 +1,23 @@
 //
-//  AddChildViewController.m
+//  ListViewController.m
 //  BabyTracker
 //
-//  Created by Iceman on 18.06.16.
+//  Created by Iceman on 25.06.16.
 //  Copyright © 2016 Kirill Zhukov. All rights reserved.
 //
 
-#import "AddChildViewController.h"
+#import "ListViewController.h"
 
-@interface AddChildViewController ()
+@interface ListViewController ()
 
 @end
 
-@implementation AddChildViewController
+@implementation ListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
 
 @end

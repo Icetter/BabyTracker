@@ -7,55 +7,115 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepViewController">
             <connections>
+                <outlet property="timerLabel" destination="C0s-I9-RkG" id="iPI-Xc-pU1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLR-fk-urA">
-                    <rect key="frame" x="48" y="60" width="96" height="52"/>
-                    <state key="normal" title="Home"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-2I-agj">
-                    <rect key="frame" x="104" y="179" width="90" height="90"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-2I-agj">
+                    <rect key="frame" x="30" y="120" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="PFX-iK-gaH"/>
+                        <constraint firstAttribute="width" constant="90" id="m9j-Vr-baV"/>
+                    </constraints>
                     <state key="normal" title="Sleep"/>
+                    <connections>
+                        <action selector="sleepStartActionButton:" destination="-1" eventType="touchUpInside" id="soN-5Z-XT9"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvv-YO-X4r">
-                    <rect key="frame" x="417" y="179" width="90" height="90"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvv-YO-X4r">
+                    <rect key="frame" x="200" y="120" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="MhM-QG-7x2"/>
+                        <constraint firstAttribute="width" constant="90" id="ZKI-xX-iQB"/>
+                    </constraints>
                     <state key="normal" title="Awoke"/>
+                    <connections>
+                        <action selector="sleepStopActionButton:" destination="-1" eventType="touchUpInside" id="bZG-xV-MAz"/>
+                    </connections>
                 </button>
-                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="r7w-Nr-HFx">
-                    <rect key="frame" x="212" y="278" width="177" height="44"/>
-                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7w-Nr-HFx" id="eF4-J3-wbG">
-                        <rect key="frame" x="0.0" y="0.0" width="177" height="43.5"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQR-GF-taa">
-                                <rect key="frame" x="40" y="11" width="96" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </tableViewCellContentView>
-                </tableViewCell>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-Qf-9fe">
-                    <rect key="frame" x="260" y="407" width="80" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-Qf-9fe">
+                    <rect key="frame" x="120" y="408" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="3vg-35-Anl"/>
+                        <constraint firstAttribute="height" constant="40" id="gSR-wJ-7T6"/>
+                    </constraints>
                     <state key="normal" title="Add sleep"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-uw-6F7">
-                    <rect key="frame" x="48" y="496" width="106" height="70"/>
-                    <state key="normal" title="List of sleeps"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-uw-6F7">
+                    <rect key="frame" x="40" y="478" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Hj4-up-kzr"/>
+                        <constraint firstAttribute="height" constant="50" id="lWm-0u-IBs"/>
+                    </constraints>
+                    <state key="normal" title="List"/>
+                    <connections>
+                        <action selector="sleepListActionButton:" destination="-1" eventType="touchUpInside" id="ENT-Mx-00z"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ni-ox-TXK">
-                    <rect key="frame" x="483" y="496" width="70" height="70"/>
-                    <state key="normal" title="Add timer"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ni-ox-TXK">
+                    <rect key="frame" x="230" y="478" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="LJN-nI-toe"/>
+                        <constraint firstAttribute="height" constant="50" id="Qhh-fV-ida"/>
+                    </constraints>
+                    <state key="normal" title="Timer"/>
+                    <connections>
+                        <action selector="sleepTimerActionButton:" destination="-1" eventType="touchUpInside" id="cHB-0u-ciD"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
+                    <rect key="frame" x="35" y="245" width="250" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="QFS-tn-0yW"/>
+                        <constraint firstAttribute="width" constant="250" id="WO5-Rc-OMm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nvv-YO-X4r" secondAttribute="trailing" constant="30" id="1kj-hz-qWi"/>
+                <constraint firstAttribute="trailing" secondItem="ApF-Qf-9fe" secondAttribute="trailing" constant="120" id="Cca-zy-Pd6"/>
+                <constraint firstItem="h4Q-uw-6F7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="MD7-Ac-A5E"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Muy-wJ-Bxz"/>
+                <constraint firstAttribute="trailing" secondItem="C0s-I9-RkG" secondAttribute="trailing" constant="35" id="QbI-dr-WmC"/>
+                <constraint firstItem="h4W-2I-agj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="RI1-eh-dlm"/>
+                <constraint firstItem="h4W-2I-agj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="SjV-Xk-E4L"/>
+                <constraint firstItem="nvv-YO-X4r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="Wvi-RO-YiY"/>
+                <constraint firstAttribute="bottom" secondItem="h4Q-uw-6F7" secondAttribute="bottom" constant="40" id="bSq-Kp-OMX"/>
+                <constraint firstAttribute="bottom" secondItem="1ni-ox-TXK" secondAttribute="bottom" constant="40" id="gB1-Xa-OCk"/>
+                <constraint firstAttribute="trailing" secondItem="1ni-ox-TXK" secondAttribute="trailing" constant="40" id="tIk-Kw-AkR"/>
+                <constraint firstAttribute="bottom" secondItem="ApF-Qf-9fe" secondAttribute="bottom" constant="120" id="tgl-aV-BAO"/>
+                <constraint firstItem="ApF-Qf-9fe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="120" id="xNI-fc-WPE"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="top" secondItem="nvv-YO-X4r" secondAttribute="bottom" constant="35" id="zvU-zt-uAz"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="r7w-Nr-HFx">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7w-Nr-HFx" id="eF4-J3-wbG">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQR-GF-taa">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="367" y="-70"/>
+        </tableViewCell>
     </objects>
 </document>

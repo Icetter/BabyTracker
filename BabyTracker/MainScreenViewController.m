@@ -7,8 +7,15 @@
 //
 
 #import "MainScreenViewController.h"
+#import "MedicalCardViewController.h"
+#import "FeedViewController.h"
+#import "SleepViewController.h"
+#import "StrollViewController.h"
+#import "AddChildViewController.h"
+#import "ListViewController.h"
 
 @interface MainScreenViewController ()
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *childListBarButton;
 
 @end
 
@@ -16,22 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.leftBarButtonItem = _childListBarButton;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)childListBarButtonAction:(id)sender {
+    [self.navigationController pushViewController:[AddChildViewController new] animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)medicalCardButtonAction:(id)sender {
+    [self.navigationController pushViewController:[MedicalCardViewController new] animated:YES];
 }
-*/
+- (IBAction)sleepButtonAction:(id)sender {
+    [self.navigationController pushViewController:[SleepViewController new] animated:YES];
+}
+- (IBAction)feedButtonAction:(id)sender {
+      [self.navigationController pushViewController:[FeedViewController new] animated:YES];
+}
+
+- (IBAction)strollButtonAction:(id)sender {
+      [self.navigationController pushViewController:[StrollViewController new] animated:YES];
+}
 
 @end

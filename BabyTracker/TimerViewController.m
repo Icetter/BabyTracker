@@ -1,18 +1,18 @@
 //
-//  AddChildViewController.m
+//  TimerViewController.m
 //  BabyTracker
 //
-//  Created by Iceman on 18.06.16.
+//  Created by Iceman on 25.06.16.
 //  Copyright © 2016 Kirill Zhukov. All rights reserved.
 //
 
-#import "AddChildViewController.h"
+#import "TimerViewController.h"
 
-@interface AddChildViewController ()
+@interface TimerViewController ()
 
 @end
 
-@implementation AddChildViewController
+@implementation TimerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
