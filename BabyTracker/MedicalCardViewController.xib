@@ -39,18 +39,7 @@
                     </constraints>
                     <state key="normal" image="scale"/>
                     <connections>
-                        <action selector="addMeasuresActionButton:" destination="-1" eventType="touchDragInside" id="qXI-eJ-Qsv"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-44-mIt">
-                    <rect key="frame" x="223" y="471" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="64" id="hsB-3Y-N20"/>
-                        <constraint firstAttribute="height" constant="64" id="rka-TK-iPm"/>
-                    </constraints>
-                    <state key="normal" image="clock"/>
-                    <connections>
-                        <action selector="medicalTimerActionButton:" destination="-1" eventType="touchUpInside" id="zTW-ZE-U4b"/>
+                        <action selector="addMeasuresActionButton:" destination="-1" eventType="touchUpInside" id="WRT-iu-2CC"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wT-W0-Apq">
@@ -63,6 +52,17 @@
                     <rect key="frame" x="8" y="140" width="304" height="323"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-44-mIt">
+                    <rect key="frame" x="223" y="471" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="hsB-3Y-N20"/>
+                        <constraint firstAttribute="height" constant="64" id="rka-TK-iPm"/>
+                    </constraints>
+                    <state key="normal" image="clock"/>
+                    <connections>
+                        <action selector="medicalTimerActionButton:" destination="-1" eventType="touchUpInside" id="zTW-ZE-U4b"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainScreenViewController.h"
+#import "ChildManager.h"
+#import "Child.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,14 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    Child *child1 = [Child new];
+//    child1.name = @"Bob";
+//    child1.age = 22;
+//    [[ChildManager sharedInstance] addChild:child1];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"Ivan" forKey:@"CurrentName"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[MainScreenViewController new]];
     [_window makeKeyAndVisible];

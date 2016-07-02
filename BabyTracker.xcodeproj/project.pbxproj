@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		446899751D0D886F00CD573B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899741D0D886F00CD573B /* main.m */; };
 		446899781D0D886F00CD573B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899771D0D886F00CD573B /* AppDelegate.m */; };
-		4468997B1D0D886F00CD573B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4468997A1D0D886F00CD573B /* ViewController.m */; };
 		446899801D0D886F00CD573B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4468997F1D0D886F00CD573B /* Assets.xcassets */; };
 		4468998E1D0D886F00CD573B /* BabyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4468998D1D0D886F00CD573B /* BabyTrackerTests.m */; };
 		446899991D0D886F00CD573B /* BabyTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899981D0D886F00CD573B /* BabyTrackerUITests.m */; };
+		44881AF31D277D8300373A25 /* Child.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881AF21D277D8300373A25 /* Child.m */; };
+		44881AF81D277E1700373A25 /* ChildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881AF71D277E1700373A25 /* ChildManager.m */; };
+		44881AFC1D2784EB00373A25 /* BaseDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881AFB1D2784EB00373A25 /* BaseDataObject.m */; };
+		44881B011D27B72C00373A25 /* Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881B001D27B72C00373A25 /* Sleep.m */; };
 		44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF081D15329800C12DE4 /* MainScreenViewController.m */; };
 		44D6AF0B1D15329800C12DE4 /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF091D15329800C12DE4 /* MainScreenViewController.xib */; };
 		44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF0D1D1532B900C12DE4 /* AddChildViewController.m */; };
@@ -55,8 +58,6 @@
 		446899741D0D886F00CD573B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		446899761D0D886F00CD573B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		446899771D0D886F00CD573B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		446899791D0D886F00CD573B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4468997A1D0D886F00CD573B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4468997F1D0D886F00CD573B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446899841D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		446899891D0D886F00CD573B /* BabyTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +66,14 @@
 		446899941D0D886F00CD573B /* BabyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446899981D0D886F00CD573B /* BabyTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTrackerUITests.m; sourceTree = "<group>"; };
 		4468999A1D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44881AF11D277D8300373A25 /* Child.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Child.h; sourceTree = "<group>"; };
+		44881AF21D277D8300373A25 /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
+		44881AF61D277E1700373A25 /* ChildManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildManager.h; sourceTree = "<group>"; };
+		44881AF71D277E1700373A25 /* ChildManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildManager.m; sourceTree = "<group>"; };
+		44881AFA1D2784EB00373A25 /* BaseDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataObject.h; sourceTree = "<group>"; };
+		44881AFB1D2784EB00373A25 /* BaseDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataObject.m; sourceTree = "<group>"; };
+		44881AFF1D27B72C00373A25 /* Sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sleep.h; sourceTree = "<group>"; };
+		44881B001D27B72C00373A25 /* Sleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sleep.m; sourceTree = "<group>"; };
 		44D6AF071D15329800C12DE4 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
 		44D6AF081D15329800C12DE4 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
 		44D6AF091D15329800C12DE4 /* MainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
@@ -142,10 +151,9 @@
 		446899721D0D886F00CD573B /* BabyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				44881AF01D277D5600373A25 /* DAL */,
 				446899761D0D886F00CD573B /* AppDelegate.h */,
 				446899771D0D886F00CD573B /* AppDelegate.m */,
-				446899791D0D886F00CD573B /* ViewController.h */,
-				4468997A1D0D886F00CD573B /* ViewController.m */,
 				44D6AF161D15332A00C12DE4 /* ViewControllers */,
 				4468997F1D0D886F00CD573B /* Assets.xcassets */,
 				446899841D0D886F00CD573B /* Info.plist */,
@@ -178,6 +186,61 @@
 				4468999A1D0D886F00CD573B /* Info.plist */,
 			);
 			path = BabyTrackerUITests;
+			sourceTree = "<group>";
+		};
+		44881AF01D277D5600373A25 /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				44881AF51D277DBE00373A25 /* Mangers */,
+				44881AF41D277D8A00373A25 /* Objects */,
+			);
+			name = DAL;
+			sourceTree = "<group>";
+		};
+		44881AF41D277D8A00373A25 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				44881AFD1D2784F400373A25 /* BaseDataObject */,
+				44881AFE1D27B70800373A25 /* Sleep */,
+				44881AF91D2784D100373A25 /* Child */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		44881AF51D277DBE00373A25 /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+				44881AF61D277E1700373A25 /* ChildManager.h */,
+				44881AF71D277E1700373A25 /* ChildManager.m */,
+			);
+			name = Mangers;
+			sourceTree = "<group>";
+		};
+		44881AF91D2784D100373A25 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				44881AF11D277D8300373A25 /* Child.h */,
+				44881AF21D277D8300373A25 /* Child.m */,
+			);
+			name = Child;
+			sourceTree = "<group>";
+		};
+		44881AFD1D2784F400373A25 /* BaseDataObject */ = {
+			isa = PBXGroup;
+			children = (
+				44881AFA1D2784EB00373A25 /* BaseDataObject.h */,
+				44881AFB1D2784EB00373A25 /* BaseDataObject.m */,
+			);
+			name = BaseDataObject;
+			sourceTree = "<group>";
+		};
+		44881AFE1D27B70800373A25 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				44881AFF1D27B72C00373A25 /* Sleep.h */,
+				44881B001D27B72C00373A25 /* Sleep.m */,
+			);
+			name = Sleep;
 			sourceTree = "<group>";
 		};
 		44D6AF161D15332A00C12DE4 /* ViewControllers */ = {
@@ -427,11 +490,14 @@
 				44D6AF141D15331800C12DE4 /* SleepViewController.m in Sources */,
 				44E95D0D1D1E6501001D5FC3 /* ListViewController.m in Sources */,
 				44E95D071D1E64D3001D5FC3 /* TimerViewController.m in Sources */,
-				4468997B1D0D886F00CD573B /* ViewController.m in Sources */,
 				44D6AF1A1D15337E00C12DE4 /* FeedViewController.m in Sources */,
 				44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */,
+				44881AF31D277D8300373A25 /* Child.m in Sources */,
+				44881AFC1D2784EB00373A25 /* BaseDataObject.m in Sources */,
 				44D914201D275FB800DEE5F0 /* MeasuresViewController.m in Sources */,
+				44881B011D27B72C00373A25 /* Sleep.m in Sources */,
 				44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */,
+				44881AF81D277E1700373A25 /* ChildManager.m in Sources */,
 				44D6AF241D1533F900C12DE4 /* MedicalCardViewController.m in Sources */,
 				446899781D0D886F00CD573B /* AppDelegate.m in Sources */,
 				446899751D0D886F00CD573B /* main.m in Sources */,
