@@ -13,9 +13,14 @@
 #import "StrollViewController.h"
 #import "AddChildViewController.h"
 #import "ListViewController.h"
+#import "TimerViewController.h"
+#import "MeasuresViewController.h"
 
 @interface MainScreenViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *childListBarButton;
+@property (strong, nonatomic) IBOutlet UILabel *childAgeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *childNameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *childImage;
 
 @end
 
@@ -33,15 +38,20 @@
 - (IBAction)medicalCardButtonAction:(id)sender {
     [self.navigationController pushViewController:[MedicalCardViewController new] animated:YES];
 }
+
 - (IBAction)sleepButtonAction:(id)sender {
     [self.navigationController pushViewController:[SleepViewController new] animated:YES];
 }
+
 - (IBAction)feedButtonAction:(id)sender {
       [self.navigationController pushViewController:[FeedViewController new] animated:YES];
 }
 
 - (IBAction)strollButtonAction:(id)sender {
       [self.navigationController pushViewController:[StrollViewController new] animated:YES];
+}
+- (IBAction)timersListActionButton:(id)sender {
+     [self.navigationController pushViewController:[ListViewController new] animated:YES];
 }
 
 @end

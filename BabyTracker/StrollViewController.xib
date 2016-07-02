@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StrollViewController">
             <connections>
-                <outlet property="timerLabel" destination="rX4-X9-ET4" id="saM-zd-KmZ"/>
+                <outlet property="timeLapsedLabel" destination="vCO-Gy-7kB" id="Jvn-6q-GOm"/>
+                <outlet property="timerLabel" destination="rX4-X9-ET4" id="ElL-CP-bLP"/>
+                <outlet property="view" destination="ufs-yR-kos" id="5iW-FB-Kpr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,89 +17,117 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJf-Vv-Dw0">
-                    <rect key="frame" x="30" y="120" width="90" height="90"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJf-Vv-Dw0">
+                    <rect key="frame" x="30" y="127" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="XRQ-Cz-6OR"/>
-                        <constraint firstAttribute="width" constant="90" id="vMd-w6-Qjq"/>
+                        <constraint firstAttribute="height" constant="64" id="GpM-iO-SKK"/>
+                        <constraint firstAttribute="width" constant="64" id="wQf-Z2-z7r"/>
                     </constraints>
-                    <state key="normal" title="Go out"/>
+                    <state key="normal" image="baby_feet"/>
                     <connections>
                         <action selector="goOutActionButton:" destination="-1" eventType="touchUpInside" id="aqu-34-sgZ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ5-X1-Wvs">
-                    <rect key="frame" x="200" y="120" width="90" height="90"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ5-X1-Wvs">
+                    <rect key="frame" x="226" y="127" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="90" id="J93-Lc-oRf"/>
-                        <constraint firstAttribute="height" constant="90" id="m3d-te-hLa"/>
+                        <constraint firstAttribute="height" constant="64" id="AmV-sO-8y6"/>
+                        <constraint firstAttribute="width" constant="64" id="W7n-pq-Lnm"/>
                     </constraints>
-                    <state key="normal" title="Came from"/>
+                    <state key="normal" image="home"/>
                     <connections>
                         <action selector="cameFromActionButton:" destination="-1" eventType="touchUpInside" id="3Mg-ff-odo"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-5l-hZF">
-                    <rect key="frame" x="120" y="408" width="80" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-Ll-FzQ">
+                    <rect key="frame" x="33" y="471" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="JBg-OJ-JjX"/>
-                        <constraint firstAttribute="height" constant="40" id="z86-nj-roi"/>
+                        <constraint firstAttribute="width" constant="64" id="jk4-SO-OSd"/>
+                        <constraint firstAttribute="height" constant="64" id="kEf-1M-M5o"/>
                     </constraints>
-                    <state key="normal" title="Add stroll"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-Ll-FzQ">
-                    <rect key="frame" x="40" y="478" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="I2Q-48-RaP"/>
-                        <constraint firstAttribute="height" constant="50" id="zLs-0a-L88"/>
-                    </constraints>
-                    <state key="normal" title="List"/>
+                    <state key="normal" image="day_view"/>
                     <connections>
                         <action selector="strollListActionButton:" destination="-1" eventType="touchUpInside" id="nTY-oP-MYJ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-ym-iU5">
-                    <rect key="frame" x="230" y="478" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-ym-iU5">
+                    <rect key="frame" x="223" y="471" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="G8d-LZ-H4f"/>
-                        <constraint firstAttribute="width" constant="50" id="fSb-Bh-HXV"/>
+                        <constraint firstAttribute="width" constant="64" id="38f-Jc-H8B"/>
+                        <constraint firstAttribute="height" constant="64" id="P2l-T3-MA3"/>
                     </constraints>
-                    <state key="normal" title="Timer"/>
+                    <state key="normal" image="clock"/>
                     <connections>
                         <action selector="strollTimerActionButton:" destination="-1" eventType="touchUpInside" id="7OV-ON-zIc"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time from start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-X9-ET4">
-                    <rect key="frame" x="35" y="234" width="250" height="100"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-X9-ET4">
+                    <rect key="frame" x="35" y="226" width="250" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="ccF-hY-zhp"/>
-                        <constraint firstAttribute="width" constant="250" id="lqm-wH-zkD"/>
+                        <constraint firstAttribute="height" constant="80" id="G55-mX-mRg"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time since last sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCO-Gy-7kB">
+                    <rect key="frame" x="35" y="80" width="250" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-5l-hZF">
+                    <rect key="frame" x="128" y="366" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="Vyy-nl-0Pm"/>
+                        <constraint firstAttribute="height" constant="64" id="xnf-ZN-xNN"/>
+                    </constraints>
+                    <state key="normal" image="plus"/>
+                    <connections>
+                        <action selector="addStrollActionButton:" destination="-1" eventType="touchUpInside" id="rY3-CC-5BK"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="fJT-5l-hZF" secondAttribute="trailing" constant="120" id="2s0-2e-0jx"/>
-                <constraint firstItem="rX4-X9-ET4" firstAttribute="centerY" secondItem="ufs-yR-kos" secondAttribute="centerY" id="H4V-t5-5do"/>
-                <constraint firstAttribute="bottom" secondItem="fJT-5l-hZF" secondAttribute="bottom" constant="120" id="HaJ-fO-4MZ"/>
-                <constraint firstAttribute="trailing" secondItem="cfP-ym-iU5" secondAttribute="trailing" constant="40" id="Hpt-UB-TFc"/>
-                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="30" id="Is7-T6-cMC"/>
-                <constraint firstItem="UmU-Ll-FzQ" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="40" id="N49-MV-eer"/>
-                <constraint firstItem="rX4-X9-ET4" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="NvV-vB-xFa"/>
-                <constraint firstItem="kJ5-X1-Wvs" firstAttribute="top" secondItem="ufs-yR-kos" secondAttribute="top" constant="120" id="Vhm-Jv-Jyc"/>
-                <constraint firstAttribute="bottom" secondItem="cfP-ym-iU5" secondAttribute="bottom" constant="40" id="bud-Io-9Xb"/>
-                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="top" secondItem="ufs-yR-kos" secondAttribute="top" constant="120" id="cod-nR-wCa"/>
-                <constraint firstItem="fJT-5l-hZF" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="120" id="eHz-DV-R9i"/>
-                <constraint firstAttribute="trailing" secondItem="rX4-X9-ET4" secondAttribute="trailing" constant="35" id="oer-vb-mjd"/>
-                <constraint firstAttribute="trailing" secondItem="kJ5-X1-Wvs" secondAttribute="trailing" constant="30" id="pRD-VW-xOi"/>
-                <constraint firstAttribute="bottom" secondItem="UmU-Ll-FzQ" secondAttribute="bottom" constant="40" id="twS-fA-UVH"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="2Qp-ds-KKI"/>
+                <constraint firstItem="fJT-5l-hZF" firstAttribute="top" secondItem="rX4-X9-ET4" secondAttribute="bottom" constant="60" id="3CA-re-s2m"/>
+                <constraint firstItem="fJT-5l-hZF" firstAttribute="top" secondItem="rX4-X9-ET4" secondAttribute="bottom" constant="60" id="7D0-hb-YRF"/>
+                <constraint firstAttribute="trailing" secondItem="rX4-X9-ET4" secondAttribute="trailing" constant="35" id="7RH-4w-3Z0"/>
+                <constraint firstAttribute="trailing" secondItem="cfP-ym-iU5" secondAttribute="trailing" constant="33" id="8Dx-9R-6Id"/>
+                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="30" id="GTB-Md-9k9"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="top" secondItem="kJ5-X1-Wvs" secondAttribute="bottom" constant="35" id="LTf-Or-TO5"/>
+                <constraint firstItem="vCO-Gy-7kB" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="QW5-aW-d2K"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="top" secondItem="kJ5-X1-Wvs" secondAttribute="bottom" constant="35" id="T8s-iA-Gqv"/>
+                <constraint firstAttribute="trailing" secondItem="vCO-Gy-7kB" secondAttribute="trailing" constant="35" id="TwS-TE-apb"/>
+                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="top" secondItem="vCO-Gy-7kB" secondAttribute="bottom" constant="23" id="UuG-UE-WML"/>
+                <constraint firstAttribute="trailing" secondItem="fJT-5l-hZF" secondAttribute="trailing" constant="128" id="fU0-nm-SW3"/>
+                <constraint firstItem="vCO-Gy-7kB" firstAttribute="top" secondItem="ufs-yR-kos" secondAttribute="top" constant="80" id="g5F-NS-PcX"/>
+                <constraint firstItem="kJ5-X1-Wvs" firstAttribute="top" secondItem="vCO-Gy-7kB" secondAttribute="bottom" constant="23" id="nAU-1S-wx7"/>
+                <constraint firstAttribute="bottom" secondItem="UmU-Ll-FzQ" secondAttribute="bottom" constant="33" id="pXM-5Z-Rig"/>
+                <constraint firstAttribute="bottom" secondItem="cfP-ym-iU5" secondAttribute="bottom" constant="33" id="ptT-j8-D1w"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="top" secondItem="JJf-Vv-Dw0" secondAttribute="bottom" constant="35" id="pyQ-Qy-BKo"/>
+                <constraint firstItem="fJT-5l-hZF" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="128" id="q3b-KY-JPi"/>
+                <constraint firstAttribute="trailing" secondItem="kJ5-X1-Wvs" secondAttribute="trailing" constant="30" id="rX0-uo-e3p"/>
+                <constraint firstItem="UmU-Ll-FzQ" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="33" id="zIr-LL-IBu"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="LTf-Or-TO5"/>
+                    <exclude reference="3CA-re-s2m"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="252" y="307"/>
         </view>
     </objects>
+    <resources>
+        <image name="baby_feet" width="64" height="64"/>
+        <image name="clock" width="64" height="64"/>
+        <image name="day_view" width="64" height="64"/>
+        <image name="home" width="64" height="64"/>
+        <image name="plus" width="64" height="64"/>
+    </resources>
 </document>

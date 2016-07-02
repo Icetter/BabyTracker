@@ -15,12 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qDt-EH-kX2">
-                    <rect key="frame" x="47" y="84" width="320" height="568"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qDt-EH-kX2">
+                    <rect key="frame" x="20" y="80" width="374" height="636"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="lwF-Yw-cPL"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qDt-EH-kX2" firstAttribute="top" secondItem="gbF-8h-9O9" secondAttribute="top" constant="80" id="37f-Go-pj9"/>
+                <constraint firstAttribute="bottom" secondItem="qDt-EH-kX2" secondAttribute="bottom" constant="20" id="63O-mH-U0F"/>
+                <constraint firstItem="qDt-EH-kX2" firstAttribute="leading" secondItem="gbF-8h-9O9" secondAttribute="leading" constant="20" id="85o-tX-X82"/>
+                <constraint firstAttribute="trailing" secondItem="qDt-EH-kX2" secondAttribute="trailing" constant="20" id="E6s-4b-7UM"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="361" y="113"/>
         </view>

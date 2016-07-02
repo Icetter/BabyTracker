@@ -12,6 +12,8 @@
 
 @interface SleepViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *timerLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLapsedLabel;
+@property (strong, nonatomic) IBOutlet UILabel *babySleepsLabel;
 
 @end
 
@@ -24,6 +26,8 @@
 - (IBAction)sleepStartActionButton:(id)sender {
 }
 - (IBAction)sleepStopActionButton:(id)sender {
+}
+- (IBAction)addSleepActionButton:(id)sender {
 }
 
 - (IBAction)sleepTimerActionButton:(id)sender {

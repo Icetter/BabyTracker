@@ -9,6 +9,9 @@
 #import "TimerViewController.h"
 
 @interface TimerViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *timerTextLabel;
+@property (strong, nonatomic) IBOutlet UITextField *badgeTextField;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -17,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)addTimerActionButton:(id)sender {
 }
 
 @end

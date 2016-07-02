@@ -11,8 +11,10 @@
 #import "TimerViewController.h"
 
 @interface FeedViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *timerLabel;
-@property (strong, nonatomic) IBOutlet UILabel *quantityOfFoodLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLapsedLabel;
+@property (strong, nonatomic) IBOutlet UILabel *foodQuantityLabel;
+@property (strong, nonatomic) IBOutlet UITextField *foodQuantityTextField;
+@property (strong, nonatomic) IBOutlet UIPickerView *foodPicker;
 
 @end
 

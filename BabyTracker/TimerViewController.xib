@@ -5,61 +5,76 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController">
+            <connections>
+                <outlet property="badgeTextField" destination="xWS-8M-L3I" id="AcN-ck-LDQ"/>
+                <outlet property="datePicker" destination="lJM-bP-mnq" id="6CU-SW-M8a"/>
+                <outlet property="timerTextLabel" destination="zTu-px-LFm" id="Htk-5t-hUw"/>
+                <outlet property="view" destination="bjk-jG-icl" id="XNT-0x-fgQ"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="bjk-jG-icl">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lJM-bP-mnq">
-                    <rect key="frame" x="0.0" y="172" width="320" height="216"/>
+                    <rect key="frame" x="1" y="174" width="318" height="216"/>
                     <date key="date" timeIntervalSinceReferenceDate="488528626.07025999">
                         <!--2016-06-25 06:23:46 +0000-->
                     </date>
                 </datePicker>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type your badge to timer" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-8M-L3I">
-                    <rect key="frame" x="10" y="428" width="300" height="30"/>
+                    <rect key="frame" x="10" y="124" width="300" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-zo-NOt">
-                    <rect key="frame" x="140" y="488" width="40" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-zo-NOt">
+                    <rect key="frame" x="128" y="420" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="5uO-am-dWg"/>
-                        <constraint firstAttribute="height" constant="40" id="PSh-AI-HOQ"/>
+                        <constraint firstAttribute="height" constant="64" id="Cup-fl-acQ"/>
+                        <constraint firstAttribute="width" constant="64" id="PRR-mL-kxH"/>
                     </constraints>
-                    <state key="normal" title="Add"/>
+                    <state key="normal" image="plus"/>
+                    <connections>
+                        <action selector="addTimerActionButton:" destination="-1" eventType="touchUpInside" id="hIf-x8-UmQ"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTu-px-LFm">
-                    <rect key="frame" x="35" y="102" width="250" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="RwU-HD-d2a"/>
-                        <constraint firstAttribute="width" constant="250" id="vDL-oq-dwm"/>
-                    </constraints>
+                    <rect key="frame" x="35" y="90" width="250" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="zTu-px-LFm" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="35" id="C40-K7-XiZ"/>
-                <constraint firstItem="cR7-zo-NOt" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="140" id="Do9-YQ-VLx"/>
-                <constraint firstItem="xWS-8M-L3I" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="10" id="Eb4-TB-duC"/>
-                <constraint firstAttribute="trailing" secondItem="lJM-bP-mnq" secondAttribute="trailing" id="JnS-C9-1pH"/>
-                <constraint firstAttribute="trailing" secondItem="cR7-zo-NOt" secondAttribute="trailing" constant="140" id="MrX-Vd-Pcs"/>
-                <constraint firstAttribute="trailing" secondItem="zTu-px-LFm" secondAttribute="trailing" constant="35" id="OGm-JW-s97"/>
-                <constraint firstItem="lJM-bP-mnq" firstAttribute="top" secondItem="zTu-px-LFm" secondAttribute="bottom" constant="40" id="ZEj-vw-fgB"/>
-                <constraint firstItem="lJM-bP-mnq" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" id="iJP-0Q-XvS"/>
-                <constraint firstItem="cR7-zo-NOt" firstAttribute="top" secondItem="xWS-8M-L3I" secondAttribute="bottom" constant="30" id="mCt-pF-TZx"/>
-                <constraint firstAttribute="bottom" secondItem="cR7-zo-NOt" secondAttribute="bottom" constant="40" id="p3S-uQ-TVM"/>
-                <constraint firstItem="xWS-8M-L3I" firstAttribute="top" secondItem="lJM-bP-mnq" secondAttribute="bottom" constant="40" id="uHP-VJ-L7q"/>
-                <constraint firstAttribute="trailing" secondItem="xWS-8M-L3I" secondAttribute="trailing" constant="10" id="xB8-2B-hYa"/>
+                <constraint firstAttribute="trailing" secondItem="cR7-zo-NOt" secondAttribute="trailing" constant="128" id="3C2-68-2MP"/>
+                <constraint firstItem="xWS-8M-L3I" firstAttribute="top" secondItem="bjk-jG-icl" secondAttribute="top" constant="134" id="9wJ-zR-lsD"/>
+                <constraint firstItem="xWS-8M-L3I" firstAttribute="top" secondItem="zTu-px-LFm" secondAttribute="bottom" constant="14" id="Aps-mZ-H2d"/>
+                <constraint firstItem="cR7-zo-NOt" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="128" id="HAP-nu-yci"/>
+                <constraint firstItem="cR7-zo-NOt" firstAttribute="top" secondItem="lJM-bP-mnq" secondAttribute="bottom" constant="30" id="J4O-Nr-jdG"/>
+                <constraint firstAttribute="trailing" secondItem="zTu-px-LFm" secondAttribute="trailing" constant="35" id="LRy-i1-9Bc"/>
+                <constraint firstItem="lJM-bP-mnq" firstAttribute="top" secondItem="xWS-8M-L3I" secondAttribute="bottom" constant="20" id="LTP-Be-Fja"/>
+                <constraint firstItem="xWS-8M-L3I" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="10" id="RS0-GU-c0y"/>
+                <constraint firstItem="zTu-px-LFm" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="35" id="U6Z-27-GIa"/>
+                <constraint firstAttribute="trailing" secondItem="lJM-bP-mnq" secondAttribute="trailing" constant="1" id="Uva-vI-NPr"/>
+                <constraint firstItem="lJM-bP-mnq" firstAttribute="leading" secondItem="bjk-jG-icl" secondAttribute="leading" constant="1" id="VrI-WG-F5s"/>
+                <constraint firstItem="zTu-px-LFm" firstAttribute="top" secondItem="bjk-jG-icl" secondAttribute="top" constant="90" id="ent-Ec-JXq"/>
+                <constraint firstAttribute="trailing" secondItem="xWS-8M-L3I" secondAttribute="trailing" constant="10" id="hpj-xQ-VOv"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="9wJ-zR-lsD"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="793" y="326"/>
         </view>
     </objects>
+    <resources>
+        <image name="plus" width="64" height="64"/>
+    </resources>
 </document>

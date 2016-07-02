@@ -25,6 +25,8 @@
 		44D6AF201D1533AF00C12DE4 /* StrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF1E1D1533AF00C12DE4 /* StrollViewController.xib */; };
 		44D6AF241D1533F900C12DE4 /* MedicalCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6AF221D1533F900C12DE4 /* MedicalCardViewController.m */; };
 		44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */; };
+		44D914201D275FB800DEE5F0 /* MeasuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D9141E1D275FB800DEE5F0 /* MeasuresViewController.m */; };
+		44D914211D275FB800DEE5F0 /* MeasuresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D9141F1D275FB800DEE5F0 /* MeasuresViewController.xib */; };
 		44E95D071D1E64D3001D5FC3 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E95D051D1E64D3001D5FC3 /* TimerViewController.m */; };
 		44E95D081D1E64D3001D5FC3 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E95D061D1E64D3001D5FC3 /* TimerViewController.xib */; };
 		44E95D0D1D1E6501001D5FC3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E95D0B1D1E6501001D5FC3 /* ListViewController.m */; };
@@ -81,6 +83,9 @@
 		44D6AF211D1533F900C12DE4 /* MedicalCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalCardViewController.h; sourceTree = "<group>"; };
 		44D6AF221D1533F900C12DE4 /* MedicalCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalCardViewController.m; sourceTree = "<group>"; };
 		44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalCardViewController.xib; sourceTree = "<group>"; };
+		44D9141D1D275FB800DEE5F0 /* MeasuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasuresViewController.h; sourceTree = "<group>"; };
+		44D9141E1D275FB800DEE5F0 /* MeasuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasuresViewController.m; sourceTree = "<group>"; };
+		44D9141F1D275FB800DEE5F0 /* MeasuresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeasuresViewController.xib; sourceTree = "<group>"; };
 		44E95D041D1E64D3001D5FC3 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		44E95D051D1E64D3001D5FC3 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		44E95D061D1E64D3001D5FC3 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
@@ -186,6 +191,7 @@
 				44D6AF2B1D15342C00C12DE4 /* MedicalCard */,
 				44E95D091D1E64DD001D5FC3 /* Timer */,
 				44E95D0F1D1E6508001D5FC3 /* List */,
+				44D914221D275FBF00DEE5F0 /* Measures */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -248,6 +254,16 @@
 				44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */,
 			);
 			name = MedicalCard;
+			sourceTree = "<group>";
+		};
+		44D914221D275FBF00DEE5F0 /* Measures */ = {
+			isa = PBXGroup;
+			children = (
+				44D9141D1D275FB800DEE5F0 /* MeasuresViewController.h */,
+				44D9141E1D275FB800DEE5F0 /* MeasuresViewController.m */,
+				44D9141F1D275FB800DEE5F0 /* MeasuresViewController.xib */,
+			);
+			name = Measures;
 			sourceTree = "<group>";
 		};
 		44E95D091D1E64DD001D5FC3 /* Timer */ = {
@@ -382,6 +398,7 @@
 				446899801D0D886F00CD573B /* Assets.xcassets in Resources */,
 				44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */,
 				44D6AF151D15331800C12DE4 /* SleepViewController.xib in Resources */,
+				44D914211D275FB800DEE5F0 /* MeasuresViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +430,7 @@
 				4468997B1D0D886F00CD573B /* ViewController.m in Sources */,
 				44D6AF1A1D15337E00C12DE4 /* FeedViewController.m in Sources */,
 				44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */,
+				44D914201D275FB800DEE5F0 /* MeasuresViewController.m in Sources */,
 				44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */,
 				44D6AF241D1533F900C12DE4 /* MedicalCardViewController.m in Sources */,
 				446899781D0D886F00CD573B /* AppDelegate.m in Sources */,

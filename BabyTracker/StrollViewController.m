@@ -12,6 +12,7 @@
 
 @interface StrollViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *timerLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLapsedLabel;
 
 @end
 
@@ -24,6 +25,8 @@
 - (IBAction)goOutActionButton:(id)sender {
 }
 - (IBAction)cameFromActionButton:(id)sender {
+}
+- (IBAction)addStrollActionButton:(id)sender {
 }
 - (IBAction)strollTimerActionButton:(id)sender {
     [self.navigationController pushViewController:[TimerViewController new] animated:YES];
