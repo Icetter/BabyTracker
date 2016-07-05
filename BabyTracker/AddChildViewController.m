@@ -7,6 +7,7 @@
 //
 
 #import "AddChildViewController.h"
+#import "MainScreenViewController.h"
 #import "Child.h"
 #import "ChildManager.h"
 
@@ -24,11 +25,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Child *newChild = [Child new];
+    Child *newChild = [[Child alloc] init];
     _child = newChild;
     
     [_childNameTextField addTarget:self action:@selector(textFieldShouldReturn:) forControlEvents:UIControlEventEditingDidEndOnExit];
     _bottomPickerConstraint.constant = -1000;
+    _childSaveActionButton.enabled = NO;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -36,20 +38,20 @@
         _child.name = _childNameTextField.text;
         NSLog(@"%@", _child.name);
         _bottomPickerConstraint.constant = +120;
+         _childSaveActionButton.enabled = YES;
         return _child.name;
     } else if (_childAgePicker.isEnabled){
-        
-//        _child.age = _childAgeTextField.text;
-//         NSLog(@"%lu", (unsigned long)_child.age);
-//        _child.age = [[NSDate date] timeIntervalSinceDate:_childAgePicker.date];
         return YES;
-    }
+        }
     return NO;
 }
 - (IBAction)childSaveActionButton:(id)sender {
-    _child.age = _childAgePicker.date;
-    NSLog(@"%@", _child.age);
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yyyy"];
+    _child.birthDate =[formatter stringFromDate:_childAgePicker.date];
+    NSLog(@"%@", _child.birthDate);
     [[ChildManager sharedInstance] addChild:_child];
-}
+    [self.navigationController popViewControllerAnimated:YES];
+    }
 
 @end

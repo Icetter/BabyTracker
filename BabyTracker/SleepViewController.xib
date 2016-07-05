@@ -24,7 +24,7 @@
                         <constraint firstAttribute="height" constant="90" id="PFX-iK-gaH"/>
                         <constraint firstAttribute="width" constant="90" id="m9j-Vr-baV"/>
                     </constraints>
-                    <state key="normal" image="sleep"/>
+                    <state key="normal" title="Sleep" image="sleep"/>
                     <connections>
                         <action selector="sleepStartActionButton:" destination="-1" eventType="touchUpInside" id="soN-5Z-XT9"/>
                     </connections>
@@ -35,7 +35,7 @@
                         <constraint firstAttribute="height" constant="90" id="MhM-QG-7x2"/>
                         <constraint firstAttribute="width" constant="90" id="ZKI-xX-iQB"/>
                     </constraints>
-                    <state key="normal" image="babys_room"/>
+                    <state key="normal" title="Wake Up" image="babys_room"/>
                     <connections>
                         <action selector="sleepStopActionButton:" destination="-1" eventType="touchUpInside" id="bZG-xV-MAz"/>
                     </connections>
@@ -46,7 +46,7 @@
                         <constraint firstAttribute="width" constant="50" id="Hj4-up-kzr"/>
                         <constraint firstAttribute="height" constant="50" id="lWm-0u-IBs"/>
                     </constraints>
-                    <state key="normal" image="day_view"/>
+                    <state key="normal" title="List" image="day_view"/>
                     <connections>
                         <action selector="sleepListActionButton:" destination="-1" eventType="touchUpInside" id="ENT-Mx-00z"/>
                     </connections>
@@ -57,7 +57,7 @@
                         <constraint firstAttribute="width" constant="50" id="LJN-nI-toe"/>
                         <constraint firstAttribute="height" constant="50" id="Qhh-fV-ida"/>
                     </constraints>
-                    <state key="normal" image="clock"/>
+                    <state key="normal" title="Add Timer" image="clock"/>
                     <connections>
                         <action selector="sleepTimerActionButton:" destination="-1" eventType="touchUpInside" id="cHB-0u-ciD"/>
                     </connections>
@@ -88,7 +88,7 @@
                         <constraint firstAttribute="height" constant="64" id="Ntg-7z-Cpf"/>
                         <constraint firstAttribute="width" constant="64" id="whX-BB-V6t"/>
                     </constraints>
-                    <state key="normal" image="plus"/>
+                    <state key="normal" title="Add Sleep" image="plus"/>
                     <connections>
                         <action selector="addSleepActionButton:" destination="-1" eventType="touchUpInside" id="r8H-rG-b9h"/>
                     </connections>
@@ -128,23 +128,6 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="r7w-Nr-HFx">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7w-Nr-HFx" id="eF4-J3-wbG">
-                <rect key="frame" x="0.0" y="0.0" width="250" height="79.5"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQR-GF-taa">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </subviews>
-            </tableViewCellContentView>
-            <point key="canvasLocation" x="367" y="-70"/>
-        </tableViewCell>
     </objects>
     <resources>
         <image name="babys_room" width="64" height="64"/>

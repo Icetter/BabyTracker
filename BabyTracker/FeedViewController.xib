@@ -44,7 +44,7 @@
                         <constraint firstAttribute="width" constant="64" id="DCf-4a-Nfs"/>
                         <constraint firstAttribute="height" constant="64" id="K11-sL-yKH"/>
                     </constraints>
-                    <state key="normal" image="day_view"/>
+                    <state key="normal" title="List" image="day_view"/>
                     <connections>
                         <action selector="feedListActionButton:" destination="-1" eventType="touchUpInside" id="fgM-qa-2Fj"/>
                     </connections>
@@ -55,7 +55,7 @@
                         <constraint firstAttribute="width" constant="64" id="9uf-E2-1px"/>
                         <constraint firstAttribute="height" constant="64" id="zEo-2V-RCu"/>
                     </constraints>
-                    <state key="normal" image="clock"/>
+                    <state key="normal" title="Add Timer" image="clock"/>
                     <connections>
                         <action selector="feedTimerActionButton:" destination="-1" eventType="touchUpInside" id="tKO-Rb-IX0"/>
                     </connections>
@@ -79,7 +79,7 @@
                         <constraint firstAttribute="width" constant="64" id="HWt-U0-NvS"/>
                         <constraint firstAttribute="height" constant="64" id="SIJ-O2-Gzv"/>
                     </constraints>
-                    <state key="normal" title="Add" image="plus"/>
+                    <state key="normal" title="Add Feed" image="plus"/>
                     <connections>
                         <action selector="addFoodActionButton:" destination="-1" eventType="touchUpInside" id="ssL-bQ-hN4"/>
                     </connections>

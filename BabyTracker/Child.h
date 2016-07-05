@@ -11,7 +11,7 @@
 @interface Child : BaseDataObject
 
 @property (strong, nonatomic) NSString *name;
-@property (assign, nonatomic) NSDate *age;
+@property (assign, nonatomic) NSDate *birthDate;
 @property (strong, nonatomic) NSMutableArray *sleeps;
 
 @end

@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray *childs;
 @property (strong, nonatomic) Child *child;
+@property NSString* path;
 
 + (instancetype)sharedInstance;
 

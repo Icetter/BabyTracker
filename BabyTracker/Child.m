@@ -18,14 +18,14 @@
     }
     return @{
              @"Name" : _name,
-             @"Age" : _age,
+             @"Age" : _birthDate,
              @"Sleeps" : sleepsDict
              };
 }
 
 - (void)updateWithDictionary:(NSDictionary *)dictionary {
     _name = dictionary[@"Name"];
-    _age = dictionary[@"Age"];
+    _birthDate = dictionary[@"Age"];
     NSArray *list = dictionary[@"Sleeps"];
     NSMutableArray *sleeps = [NSMutableArray new];
     for (NSDictionary *dictSleep in list) {

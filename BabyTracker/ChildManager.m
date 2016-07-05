@@ -58,8 +58,8 @@
 
 - (NSString *)path {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString *path = [NSString stringWithFormat:@"%@/childs.plist",paths.firstObject];
-    return path;
+    _path = [NSString stringWithFormat:@"%@/childs.plist",paths.firstObject];
+    return _path;
 }
 
 #pragma mark - 

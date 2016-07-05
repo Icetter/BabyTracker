@@ -23,7 +23,7 @@
                         <constraint firstAttribute="height" constant="64" id="GpM-iO-SKK"/>
                         <constraint firstAttribute="width" constant="64" id="wQf-Z2-z7r"/>
                     </constraints>
-                    <state key="normal" image="baby_feet"/>
+                    <state key="normal" title="Go out" image="baby_feet"/>
                     <connections>
                         <action selector="goOutActionButton:" destination="-1" eventType="touchUpInside" id="aqu-34-sgZ"/>
                     </connections>
@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="64" id="AmV-sO-8y6"/>
                         <constraint firstAttribute="width" constant="64" id="W7n-pq-Lnm"/>
                     </constraints>
-                    <state key="normal" image="home"/>
+                    <state key="normal" title="Come home" image="home"/>
                     <connections>
                         <action selector="cameFromActionButton:" destination="-1" eventType="touchUpInside" id="3Mg-ff-odo"/>
                     </connections>
@@ -45,7 +45,7 @@
                         <constraint firstAttribute="width" constant="64" id="jk4-SO-OSd"/>
                         <constraint firstAttribute="height" constant="64" id="kEf-1M-M5o"/>
                     </constraints>
-                    <state key="normal" image="day_view"/>
+                    <state key="normal" title="List" image="day_view"/>
                     <connections>
                         <action selector="strollListActionButton:" destination="-1" eventType="touchUpInside" id="nTY-oP-MYJ"/>
                     </connections>
@@ -56,12 +56,12 @@
                         <constraint firstAttribute="width" constant="64" id="38f-Jc-H8B"/>
                         <constraint firstAttribute="height" constant="64" id="P2l-T3-MA3"/>
                     </constraints>
-                    <state key="normal" image="clock"/>
+                    <state key="normal" title="Add Timer" image="clock"/>
                     <connections>
                         <action selector="strollTimerActionButton:" destination="-1" eventType="touchUpInside" id="7OV-ON-zIc"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-X9-ET4">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-X9-ET4">
                     <rect key="frame" x="35" y="226" width="250" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="G55-mX-mRg"/>
@@ -82,7 +82,7 @@
                         <constraint firstAttribute="width" constant="64" id="Vyy-nl-0Pm"/>
                         <constraint firstAttribute="height" constant="64" id="xnf-ZN-xNN"/>
                     </constraints>
-                    <state key="normal" image="plus"/>
+                    <state key="normal" title="Add Stroll" image="plus"/>
                     <connections>
                         <action selector="addStrollActionButton:" destination="-1" eventType="touchUpInside" id="rY3-CC-5BK"/>
                     </connections>

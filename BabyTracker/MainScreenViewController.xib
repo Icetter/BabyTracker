@@ -10,7 +10,7 @@
                 <outlet property="childAgeLabel" destination="Me7-b7-K1U" id="UUD-gP-FGC"/>
                 <outlet property="childImage" destination="mNc-gS-jCg" id="Lfs-rP-X4v"/>
                 <outlet property="childListBarButton" destination="Vja-tj-YgW" id="leu-lc-Jj5"/>
-                <outlet property="childNameLabel" destination="DiW-1H-jA4" id="gHP-uP-Psi"/>
+                <outlet property="childNameLabel" destination="DiW-1H-jA4" id="cCe-Wa-s2R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="funny-baby-pictures-16" translatesAutoresizingMaskIntoConstraints="NO" id="mNc-gS-jCg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="funny-baby-pictures-16" translatesAutoresizingMaskIntoConstraints="NO" id="mNc-gS-jCg">
                     <rect key="frame" x="60" y="198" width="200" height="200"/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
@@ -29,7 +29,7 @@
                         <constraint firstAttribute="width" constant="64" id="YUc-PK-5ur"/>
                         <constraint firstAttribute="height" constant="64" id="a1p-Fc-sfM"/>
                     </constraints>
-                    <state key="normal" image="health_book"/>
+                    <state key="normal" title="Medical card" image="health_book"/>
                     <connections>
                         <action selector="medicalCardButtonAction:" destination="-1" eventType="touchUpInside" id="Zyy-N0-Aqt"/>
                     </connections>
@@ -40,7 +40,7 @@
                         <constraint firstAttribute="height" constant="64" id="Jee-YD-xtE"/>
                         <constraint firstAttribute="width" constant="64" id="rLj-FJ-mMZ"/>
                     </constraints>
-                    <state key="normal" image="stroller"/>
+                    <state key="normal" title="Stroll" image="stroller"/>
                     <connections>
                         <action selector="strollButtonAction:" destination="-1" eventType="touchUpInside" id="XHm-RF-eWv"/>
                     </connections>
@@ -57,7 +57,7 @@
                         <constraint firstAttribute="width" constant="64" id="W14-lM-Gal"/>
                         <constraint firstAttribute="height" constant="64" id="yhQ-8q-Bk2"/>
                     </constraints>
-                    <state key="normal" image="bottle"/>
+                    <state key="normal" title="Feed" image="bottle"/>
                     <connections>
                         <action selector="feedButtonAction:" destination="-1" eventType="touchUpInside" id="Ati-mf-9Zk"/>
                     </connections>
@@ -68,7 +68,7 @@
                         <constraint firstAttribute="height" constant="64" id="Zaz-0g-eX0"/>
                         <constraint firstAttribute="width" constant="64" id="m6Z-Ra-xgI"/>
                     </constraints>
-                    <state key="normal" image="property_time"/>
+                    <state key="normal" title="List of timers" image="property_time"/>
                     <connections>
                         <action selector="timersListActionButton:" destination="-1" eventType="touchUpInside" id="csj-pB-gce"/>
                     </connections>
@@ -79,7 +79,7 @@
                         <constraint firstAttribute="width" constant="64" id="BDU-24-epM"/>
                         <constraint firstAttribute="height" constant="64" id="x75-Ke-nuC"/>
                     </constraints>
-                    <state key="normal" image="crib"/>
+                    <state key="normal" title="Sleep" image="crib"/>
                     <connections>
                         <action selector="sleepButtonAction:" destination="-1" eventType="touchUpInside" id="ytL-K9-iDl"/>
                     </connections>
