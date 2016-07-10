@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController">
             <connections>
+                <outlet property="addTimerActionButton" destination="cR7-zo-NOt" id="OHK-Nf-opn"/>
                 <outlet property="badgeTextField" destination="xWS-8M-L3I" id="AcN-ck-LDQ"/>
                 <outlet property="datePicker" destination="lJM-bP-mnq" id="6CU-SW-M8a"/>
                 <outlet property="timerTextLabel" destination="zTu-px-LFm" id="Htk-5t-hUw"/>

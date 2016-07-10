@@ -10,4 +10,9 @@
 
 @interface Sleep : BaseDataObject
 
+@property (strong, nonatomic) NSDate* sleepStart;
+@property (strong, nonatomic) NSDate* sleepStop;
+@property (strong, nonatomic) NSDate* date;
+@property (strong, nonatomic) NSDate* sleepDuration;
+
 @end

@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDate *startTime = [NSDate date];
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)goOutActionButton:(id)sender {

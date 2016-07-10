@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		441579BB1D28BC1800300220 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441579B91D28BC1800300220 /* BaseViewController.m */; };
 		441579BC1D28BC1800300220 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 441579BA1D28BC1800300220 /* BaseViewController.xib */; };
-		441C4BBC1D2A464B002E3F75 /* DateTools in Resources */ = {isa = PBXBuildFile; fileRef = 441C4BBB1D2A464B002E3F75 /* DateTools */; };
 		446899751D0D886F00CD573B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899741D0D886F00CD573B /* main.m */; };
 		446899781D0D886F00CD573B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899771D0D886F00CD573B /* AppDelegate.m */; };
 		446899801D0D886F00CD573B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4468997F1D0D886F00CD573B /* Assets.xcassets */; };
 		4468998E1D0D886F00CD573B /* BabyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4468998D1D0D886F00CD573B /* BabyTrackerTests.m */; };
 		446899991D0D886F00CD573B /* BabyTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899981D0D886F00CD573B /* BabyTrackerUITests.m */; };
+		447B7FE81D2CF61F009B8018 /* Measures.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B7FE71D2CF61F009B8018 /* Measures.m */; };
+		447B7FEC1D2D02F4009B8018 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B7FEB1D2D02F4009B8018 /* Feed.m */; };
+		447B7FF01D2D0327009B8018 /* Stroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B7FEF1D2D0327009B8018 /* Stroll.m */; };
+		447B7FF41D2D0347009B8018 /* Timers.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B7FF31D2D0347009B8018 /* Timers.m */; };
 		44881AF31D277D8300373A25 /* Child.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881AF21D277D8300373A25 /* Child.m */; };
 		44881AF81D277E1700373A25 /* ChildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881AF71D277E1700373A25 /* ChildManager.m */; };
 		44881AFC1D2784EB00373A25 /* BaseDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 44881AFB1D2784EB00373A25 /* BaseDataObject.m */; };
@@ -60,7 +63,6 @@
 		441579B81D28BC1800300220 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		441579B91D28BC1800300220 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		441579BA1D28BC1800300220 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
-		441C4BBB1D2A464B002E3F75 /* DateTools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DateTools; sourceTree = "<group>"; };
 		446899701D0D886F00CD573B /* BabyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446899741D0D886F00CD573B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		446899761D0D886F00CD573B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 		446899941D0D886F00CD573B /* BabyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446899981D0D886F00CD573B /* BabyTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTrackerUITests.m; sourceTree = "<group>"; };
 		4468999A1D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		447B7FE61D2CF61F009B8018 /* Measures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measures.h; sourceTree = "<group>"; };
+		447B7FE71D2CF61F009B8018 /* Measures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measures.m; sourceTree = "<group>"; };
+		447B7FEA1D2D02F4009B8018 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		447B7FEB1D2D02F4009B8018 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		447B7FEE1D2D0327009B8018 /* Stroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroll.h; sourceTree = "<group>"; };
+		447B7FEF1D2D0327009B8018 /* Stroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroll.m; sourceTree = "<group>"; };
+		447B7FF21D2D0347009B8018 /* Timers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timers.h; sourceTree = "<group>"; };
+		447B7FF31D2D0347009B8018 /* Timers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timers.m; sourceTree = "<group>"; };
 		44881AF11D277D8300373A25 /* Child.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Child.h; sourceTree = "<group>"; };
 		44881AF21D277D8300373A25 /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
 		44881AF61D277E1700373A25 /* ChildManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildManager.h; sourceTree = "<group>"; };
@@ -168,7 +178,6 @@
 		446899721D0D886F00CD573B /* BabyTracker */ = {
 			isa = PBXGroup;
 			children = (
-				441C4BBB1D2A464B002E3F75 /* DateTools */,
 				44881AF01D277D5600373A25 /* DAL */,
 				446899761D0D886F00CD573B /* AppDelegate.h */,
 				446899771D0D886F00CD573B /* AppDelegate.m */,
@@ -206,6 +215,42 @@
 			path = BabyTrackerUITests;
 			sourceTree = "<group>";
 		};
+		447B7FE91D2CF622009B8018 /* Measures */ = {
+			isa = PBXGroup;
+			children = (
+				447B7FE61D2CF61F009B8018 /* Measures.h */,
+				447B7FE71D2CF61F009B8018 /* Measures.m */,
+			);
+			name = Measures;
+			sourceTree = "<group>";
+		};
+		447B7FED1D2D02F8009B8018 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				447B7FEA1D2D02F4009B8018 /* Feed.h */,
+				447B7FEB1D2D02F4009B8018 /* Feed.m */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		447B7FF11D2D032A009B8018 /* Stroll */ = {
+			isa = PBXGroup;
+			children = (
+				447B7FEE1D2D0327009B8018 /* Stroll.h */,
+				447B7FEF1D2D0327009B8018 /* Stroll.m */,
+			);
+			name = Stroll;
+			sourceTree = "<group>";
+		};
+		447B7FF51D2D034B009B8018 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				447B7FF21D2D0347009B8018 /* Timers.h */,
+				447B7FF31D2D0347009B8018 /* Timers.m */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
 		44881AF01D277D5600373A25 /* DAL */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,8 +264,12 @@
 			isa = PBXGroup;
 			children = (
 				44881AFD1D2784F400373A25 /* BaseDataObject */,
-				44881AFE1D27B70800373A25 /* Sleep */,
 				44881AF91D2784D100373A25 /* Child */,
+				44881AFE1D27B70800373A25 /* Sleep */,
+				447B7FED1D2D02F8009B8018 /* Feed */,
+				447B7FF11D2D032A009B8018 /* Stroll */,
+				447B7FF51D2D034B009B8018 /* Timer */,
+				447B7FE91D2CF622009B8018 /* Measures */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -479,7 +528,6 @@
 				44E95D0E1D1E6501001D5FC3 /* ListViewController.xib in Resources */,
 				446899801D0D886F00CD573B /* Assets.xcassets in Resources */,
 				44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */,
-				441C4BBC1D2A464B002E3F75 /* DateTools in Resources */,
 				441579BC1D28BC1800300220 /* BaseViewController.xib in Resources */,
 				44D6AF151D15331800C12DE4 /* SleepViewController.xib in Resources */,
 				44D914211D275FB800DEE5F0 /* MeasuresViewController.xib in Resources */,
@@ -510,6 +558,7 @@
 				44D6AF1F1D1533AF00C12DE4 /* StrollViewController.m in Sources */,
 				44D6AF141D15331800C12DE4 /* SleepViewController.m in Sources */,
 				44E95D0D1D1E6501001D5FC3 /* ListViewController.m in Sources */,
+				447B7FEC1D2D02F4009B8018 /* Feed.m in Sources */,
 				44E95D071D1E64D3001D5FC3 /* TimerViewController.m in Sources */,
 				44D6AF1A1D15337E00C12DE4 /* FeedViewController.m in Sources */,
 				44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */,
@@ -518,10 +567,13 @@
 				44D914201D275FB800DEE5F0 /* MeasuresViewController.m in Sources */,
 				441579BB1D28BC1800300220 /* BaseViewController.m in Sources */,
 				44881B011D27B72C00373A25 /* Sleep.m in Sources */,
+				447B7FE81D2CF61F009B8018 /* Measures.m in Sources */,
 				44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */,
 				44881AF81D277E1700373A25 /* ChildManager.m in Sources */,
+				447B7FF41D2D0347009B8018 /* Timers.m in Sources */,
 				44D6AF241D1533F900C12DE4 /* MedicalCardViewController.m in Sources */,
 				446899781D0D886F00CD573B /* AppDelegate.m in Sources */,
+				447B7FF01D2D0327009B8018 /* Stroll.m in Sources */,
 				446899751D0D886F00CD573B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

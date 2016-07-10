@@ -22,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    NSArray* foodArray = [NSArray arrayWithObjects:@"Left breast", @"Right breast", @"Racking", @"Infant formula", @"Milk porridge", @"Dairy-free porridge", @"Vegetable puree", @"Fruit puree", @"Meat puree", @"Fish puree", @"Juice", @"Water", @"Biscuit", nil];
+    
+    
+    
 }
 - (IBAction)addFoodActionButton:(id)sender {
 }

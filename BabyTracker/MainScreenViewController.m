@@ -16,8 +16,8 @@
 #import "TimerViewController.h"
 #import "MeasuresViewController.h"
 #import "Child.h"
-#import "DateTools/NSDate+DateTools.h"
 #import "ChildManager.h"
+
 
 @interface MainScreenViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *childListBarButton;
@@ -25,10 +25,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *childNameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *childImage;
 @property (strong, nonatomic) Child* child;
-@property (strong, nonatomic) ChildManager* manager;
-@property NSDate *selectedDate;
-@property NSDateFormatter *formatter;
-@property NSTimer *updateTimer;
 
 @end
 
@@ -40,41 +36,29 @@
 #pragma mark - NavigationItems
     self.navigationItem.leftBarButtonItem = _childListBarButton;
     
-#pragma mark - 
+#pragma mark -
+    ChildManager *manager = [ChildManager sharedInstance];
+    _child = manager.childs.firstObject;
+    manager.child = _child;
+    _childNameLabel.text = [NSString stringWithFormat:@"%@", _child.name];
     
-    NSDictionary* tempDict = [NSDictionary dictionaryWithContentsOfFile:_manager.path];
-    tempDict = [[_manager.childs objectAtIndex:0] objectForKey:@"Name"];
-    _childNameLabel.text = [NSString stringWithFormat:@"%@", tempDict];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yyyy"];
+    NSDate *date = [formatter dateFromString:_child.birthDate];
     
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date toDate:[NSDate date] options:0];
     
-//    self.formatter = [[NSDateFormatter alloc] init];
-//    [self.formatter setDateFormat:@"dd w MM yy"];
-//    
-//    self.selectedDate = [NSDate dateWithString:_child.birthDate formatString:self.formatter];
-//    NSString *timeAgo = [NSDate timeAgoSinceDate:self.selectedDate];
-//    NSLog(@"TimeAgo:%@", timeAgo);
-//
-//    self.updateTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateAgeLabel) userInfo:nil repeats:YES];
-//    [[NSRunLoop mainRunLoop] addTimer:self.updateTimer forMode:NSRunLoopCommonModes];
-//    
-//    [self updateAgeLabel];
-    
-    
-//    NSDictionary *dict=[results valueForKeyPath:(ChildManager*)path][0];
-    NSString *name=_child.dictionary[@"Name"];
-    NSLog(@"%@", name);
+    NSInteger year = components.year;
+    NSInteger month = components.month;
+    NSInteger day = components.day;
+    _childAgeLabel.text = [NSString stringWithFormat:@"%@ years %@ months %@ days", @(year), @(month), @(day)];
+
+//    NSString *name = [NSString stringWithFormat:@"%@", _child.dictionary[@"Name"]];
+//    NSLog(@"%@", name);
     
 }
 
--(void)updateAgeLabel{
-    self.selectedDate = [NSDate date];
-    
-    self.childAgeLabel.text = [NSString stringWithFormat:@"%ld %ld %ld %ld",
-                               (long)self.selectedDate.daysAgo,
-                               (long)self.selectedDate.weeksAgo,
-                               (long)self.selectedDate.monthsAgo,
-                               (long)self.selectedDate.yearsAgo];
-}
+#pragma mark - Buttons
 
 - (IBAction)childListBarButtonAction:(id)sender {
     [self.navigationController pushViewController:[AddChildViewController new] animated:YES];

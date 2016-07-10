@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *childSaveActionButton;
 @property (strong, nonatomic) IBOutlet UIDatePicker *childAgePicker;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomPickerConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomTableView;
 @property (strong, nonatomic) Child* child;
 
 
@@ -36,8 +37,9 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (_childNameTextField == textField){
         _child.name = _childNameTextField.text;
-        NSLog(@"%@", _child.name);
+        NSLog(@"%@", textField.text);
         _bottomPickerConstraint.constant = +120;
+        _bottomTableView.constant = -1000;
          _childSaveActionButton.enabled = YES;
         return _child.name;
     } else if (_childAgePicker.isEnabled){

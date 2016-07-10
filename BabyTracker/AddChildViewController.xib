@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddChildViewController">
             <connections>
                 <outlet property="bottomPickerConstraint" destination="Ul0-cS-d1Y" id="OUv-Gj-VJ4"/>
+                <outlet property="bottomTableView" destination="VHs-dr-JPa" id="G7T-xw-8Wb"/>
                 <outlet property="childAgePicker" destination="Btr-3W-v5F" id="vlW-h1-dwi"/>
                 <outlet property="childNameTextField" destination="ybt-0r-5MA" id="uGd-qH-1dZ"/>
                 <outlet property="childSaveActionButton" destination="sYG-LD-V7p" id="37y-dj-f8m"/>

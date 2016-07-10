@@ -24,8 +24,9 @@
 //    child1.age = 22;
 //    [[ChildManager sharedInstance] addChild:child1];
     
-    [[NSUserDefaults standardUserDefaults] setObject:@"Ivan" forKey:@"CurrentName"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] setObject:@"Ivan" forKey:@"CurrentName"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[MainScreenViewController new]];
     [_window makeKeyAndVisible];

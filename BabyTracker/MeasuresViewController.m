@@ -7,8 +7,17 @@
 //
 
 #import "MeasuresViewController.h"
+#import "Measures.h"
+#import "Child.h"
+#import "ChildManager.h"
 
 @interface MeasuresViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *heightTextField;
+@property (strong, nonatomic) IBOutlet UITextField *weightTextField;
+@property (strong, nonatomic) IBOutlet UIButton *addMeasuresActionButton;
+@property (strong, nonatomic) ChildManager* manager;
+@property (strong, nonatomic) Measures* measures;
+@property (strong, nonatomic) Child* child;
 
 @end
 
@@ -16,22 +25,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    _manager = [ChildManager sharedInstance];
+    
+    [_heightTextField addTarget:self action:@selector(textFieldShouldReturn:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    [_weightTextField addTarget:self action:@selector(textFieldShouldReturn2:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    _addMeasuresActionButton.enabled = NO;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (_heightTextField == textField){
+        _measures.height = _heightTextField.text;
+        NSLog(@"%@", textField.text);
+        [_weightTextField becomeFirstResponder];
+        return YES;
+    }
+    return NO;
 }
 
-/*
-#pragma mark - Navigation
+- (BOOL)textFieldShouldReturn2:(UITextField *)textField {
+    if (_weightTextField == textField) {
+        _measures.weight = _weightTextField.text;
+        NSLog(@"%@", textField.text);
+        _addMeasuresActionButton.enabled = YES;
+        return _measures.weight;
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    return NO;
 }
-*/
+
+- (IBAction)addMeasuresActionButton:(UIButton *)sender {
+    NSDate* date = [NSDate date];
+    _measures.measureDate = date;
+    _measures.height = _heightTextField.text;
+    _measures.weight = _weightTextField.text;
+    
+    [_manager.child.measures addObject:_measures];
+    [_manager saveData];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

@@ -9,6 +9,7 @@
 #import "MedicalCardViewController.h"
 #import "TimerViewController.h"
 #import "MeasuresViewController.h"
+#import "Measures.h"
 
 @interface MedicalCardViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *measurementsLabel;
@@ -22,10 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 - (IBAction)addMeasuresActionButton:(UIButton *)sender {
     [self.navigationController pushViewController:[MeasuresViewController new] animated:YES];
+}
+- (IBAction)addMedicalNoteActionButton:(id)sender {
 }
 
 - (IBAction)medicalTimerActionButton:(UIButton *)sender {

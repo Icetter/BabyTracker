@@ -19,14 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88F-w3-VQU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88F-w3-VQU">
                     <rect key="frame" x="90" y="111" width="55" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-uP-GsV">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-uP-GsV">
                     <rect key="frame" x="176" y="111" width="55" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="cFX-OD-x1o"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -70,25 +73,28 @@
                         <constraint firstAttribute="width" constant="64" id="eVU-yu-snh"/>
                     </constraints>
                     <state key="normal" title="Add Note" image="treatment_plan"/>
+                    <connections>
+                        <action selector="addMedicalNoteActionButton:" destination="-1" eventType="touchUpInside" id="Tch-IV-EHY"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="9wT-W0-Apq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="0zt-Zw-afU"/>
-                <constraint firstItem="KTn-uP-GsV" firstAttribute="top" secondItem="9wT-W0-Apq" secondAttribute="bottom" constant="10" id="4ox-q4-xpd"/>
                 <constraint firstItem="9wT-W0-Apq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="93D-4G-TCL"/>
                 <constraint firstItem="Frd-44-mIt" firstAttribute="leading" secondItem="mD5-MM-tTh" secondAttribute="trailing" constant="31" id="9bl-jF-J2S"/>
+                <constraint firstItem="KTn-uP-GsV" firstAttribute="leading" secondItem="88F-w3-VQU" secondAttribute="trailing" constant="31" id="CTy-5J-qlI"/>
+                <constraint firstItem="KTn-uP-GsV" firstAttribute="baseline" secondItem="88F-w3-VQU" secondAttribute="baseline" id="Eq9-Kt-EWl"/>
                 <constraint firstItem="mD5-MM-tTh" firstAttribute="leading" secondItem="Jky-jS-khp" secondAttribute="trailing" constant="31" id="Gm3-pJ-wHg"/>
-                <constraint firstAttribute="trailing" secondItem="KTn-uP-GsV" secondAttribute="trailing" constant="89" id="Hh9-od-Snp"/>
                 <constraint firstAttribute="trailing" secondItem="9wT-W0-Apq" secondAttribute="trailing" constant="90" id="KX3-z2-nSW"/>
                 <constraint firstAttribute="trailing" secondItem="scg-6J-rFr" secondAttribute="trailing" constant="8" id="M1Q-OW-Sea"/>
                 <constraint firstAttribute="bottom" secondItem="Jky-jS-khp" secondAttribute="bottom" constant="33" id="OVW-sL-o9r"/>
                 <constraint firstItem="88F-w3-VQU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="ROL-Dc-dEB"/>
                 <constraint firstItem="mD5-MM-tTh" firstAttribute="top" secondItem="scg-6J-rFr" secondAttribute="bottom" constant="8" id="YU6-if-nSz"/>
                 <constraint firstItem="Jky-jS-khp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="Zhn-K2-KCU"/>
+                <constraint firstAttribute="trailing" secondItem="KTn-uP-GsV" secondAttribute="trailing" constant="89" id="d7O-AX-0t6"/>
                 <constraint firstAttribute="bottom" secondItem="mD5-MM-tTh" secondAttribute="bottom" constant="33" id="gEO-nn-wOQ"/>
                 <constraint firstItem="scg-6J-rFr" firstAttribute="top" secondItem="88F-w3-VQU" secondAttribute="bottom" constant="8" id="gj2-sD-eEa"/>
-                <constraint firstItem="scg-6J-rFr" firstAttribute="top" secondItem="KTn-uP-GsV" secondAttribute="bottom" constant="8" id="iPj-Ss-FmT"/>
                 <constraint firstAttribute="trailing" secondItem="Frd-44-mIt" secondAttribute="trailing" constant="33" id="jZf-lA-NRs"/>
                 <constraint firstAttribute="bottom" secondItem="Frd-44-mIt" secondAttribute="bottom" constant="33" id="kuS-Vf-fCT"/>
                 <constraint firstItem="88F-w3-VQU" firstAttribute="top" secondItem="9wT-W0-Apq" secondAttribute="bottom" constant="10" id="tNh-03-TPM"/>
