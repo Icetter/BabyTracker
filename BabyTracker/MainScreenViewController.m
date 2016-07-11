@@ -33,10 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-#pragma mark - NavigationItems
     self.navigationItem.leftBarButtonItem = _childListBarButton;
     
-#pragma mark -
     ChildManager *manager = [ChildManager sharedInstance];
     _child = manager.childs.firstObject;
     manager.child = _child;
@@ -51,7 +49,19 @@
     NSInteger year = components.year;
     NSInteger month = components.month;
     NSInteger day = components.day;
-    _childAgeLabel.text = [NSString stringWithFormat:@"%@ years %@ months %@ days", @(year), @(month), @(day)];
+    
+    if (day <= 30 && month < 1 && year < 1) {
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ days", @(day)];
+
+    }
+    if (month >= 1 && year < 1) {
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ months %@ days", @(month), @(day)];
+    }
+    if (year >= 1) {
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ years %@ months %@ days", @(year), @(month), @(day)];
+    }
+    
+    
 
 //    NSString *name = [NSString stringWithFormat:@"%@", _child.dictionary[@"Name"]];
 //    NSLog(@"%@", name);

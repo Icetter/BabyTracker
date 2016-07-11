@@ -59,8 +59,11 @@
 }
 
 - (IBAction)addMeasuresActionButton:(UIButton *)sender {
-    NSDate* date = [NSDate date];
-    _measures.measureDate = date;
+    if (!_measures) {
+        _measures = [Measures new];
+    }
+     [_manager.child.measures lastObject];
+    _measures.measureDate = [NSDate date];
     _measures.height = _heightTextField.text;
     _measures.weight = _weightTextField.text;
     

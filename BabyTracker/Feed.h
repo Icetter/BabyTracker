@@ -10,4 +10,8 @@
 
 @interface Feed : BaseDataObject
 
+@property (strong, nonatomic) NSDate* date;
+@property (strong, nonatomic) NSString* foodType;
+@property (assign, nonatomic) NSNumber* foodQuantity;
+
 @end

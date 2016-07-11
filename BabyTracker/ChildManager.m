@@ -38,7 +38,7 @@
     [self saveData];
 }
 
-#pragma mark - 
+#pragma mark - Childs
 
 - (void)loadData {
     _childs = [NSMutableArray new];
@@ -58,6 +58,15 @@
     
 }
 
+- (NSString *)path {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    _path = [NSString stringWithFormat:@"%@/childs.plist",paths.firstObject];
+    NSLog(@"%@", _path);
+    return _path;
+}
+
+#pragma mark - Sleep
+
 - (void)loadSleep {
     NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"Current Sleep"];
     if (dict) {
@@ -74,14 +83,7 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Current Sleep"];
 }
 
-- (NSString *)path {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-    _path = [NSString stringWithFormat:@"%@/childs.plist",paths.firstObject];
-    NSLog(@"%@", _path);
-    return _path;
-}
-
-#pragma mark - 
+#pragma mark - Dealloc
 
 - (void)dealloc {
     [self saveData];

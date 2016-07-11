@@ -11,11 +11,21 @@
 @implementation Measures
 
 - (NSDictionary *)dictionary {
-    return @{
-             @"Date"   : _measureDate,
-             @"Heihgt" : _height,
-             @"Weight" : _weight
-             };
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    if (_height) {
+        [dict setObject:_height forKey:@"Heihgt"];
+        NSLog(@"%@", _height);
+    }
+    if (_weight) {
+        [dict setObject:_weight forKey:@"Weight"];
+        NSLog(@"%@", _weight);
+    }
+    if (_measureDate) {
+        [dict setObject:_measureDate forKey:@"Date"];
+        NSLog(@"%@", _measureDate);
+    }
+    
+    return dict;
 }
 
 - (void)updateWithDictionary:(NSDictionary *)dictionary {

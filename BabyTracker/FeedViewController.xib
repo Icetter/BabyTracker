@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController">
             <connections>
+                <outlet property="addFoodActionButton" destination="2HD-nm-yOK" id="u6c-ZY-fdB"/>
                 <outlet property="foodPicker" destination="dJ1-G7-aMH" id="fSw-TK-Htp"/>
                 <outlet property="foodQuantityLabel" destination="R9M-E6-1Cr" id="U18-mq-hTP"/>
                 <outlet property="foodQuantityTextField" destination="gvy-Ll-UaV" id="5mw-Md-9eA"/>
@@ -66,7 +67,7 @@
                         <constraint firstAttribute="width" constant="120" id="lMN-5u-ZJt"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="lMN-5u-ZJt"/>

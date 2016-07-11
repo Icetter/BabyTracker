@@ -33,8 +33,7 @@
     [super viewDidLoad];
     _needSave = YES;
     _manager = [ChildManager sharedInstance];
-    _sleep = _manager.sleep;
-    _stoptDate = _sleep.sleepStop;
+   
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -61,17 +60,19 @@
     }
 }
 
+#pragma mark -
+
 - (void)updateTime {
-    [self timer:_startDate];
-    [self timeLapsed:_stoptDate];
+    [self timerfrom:_startDate to:[NSDate date]];
+    [self timeLapsedfrom:_stoptDate to:[NSDate date]];
 }
 
-- (NSString *) stringTime:(NSDate*) date {
+- (NSString *) stringTimefrom:(NSDate*) date to:(NSDate*) date2{
     if (date != nil) {
         NSDateComponents* timer = [[NSCalendar currentCalendar]
                                    components:NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond
                                    fromDate:date
-                                   toDate:[NSDate date]
+                                   toDate:date2
                                    options:0];
         
         NSInteger hour = timer.hour;
@@ -83,15 +84,15 @@
     }
 }
 
-- (void) timeLapsed:(NSDate*) date {
+- (void) timeLapsedfrom:(NSDate*) date to:(NSDate*) date2 {
     if (date != nil) {
-        _timeLapsedLabel.text = [self stringTime:date];
+        _timeLapsedLabel.text = [self stringTimefrom:date to:date2];
     }
 }
 
-- (void) timer:(NSDate*) date {
+- (void) timerfrom:(NSDate*) date to:(NSDate*) date2 {
     if (date != nil) {
-        _timerLabel.text = [self stringTime:date];
+        _timerLabel.text = [self stringTimefrom:date to:date2];
         
     }
 }
@@ -103,11 +104,10 @@
     
     [_manager.child.sleeps lastObject];
     
-    
     _sleep.sleepStart = _startDate;
     _sleep.sleepStop = _stoptDate;
     _sleep.date = [NSDate date];
-    _sleep.sleepDuration = [self stringTime:[NSDate date]];
+    _sleep.sleepDuration = [self stringTimefrom:_stoptDate to:_startDate];
     
     [_manager.child.sleeps addObject:_sleep];
     [_manager saveData];
@@ -119,6 +119,8 @@
         [_manager saveSleep];
     }
 }
+
+#pragma mark - Buttons
 
 - (IBAction)sleepStartActionButton:(id)sender {
     _needSave = YES;
