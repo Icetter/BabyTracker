@@ -26,30 +26,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     _manager = [ChildManager sharedInstance];
     
-    [_heightTextField addTarget:self action:@selector(textFieldShouldReturn:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    [_weightTextField addTarget:self action:@selector(textFieldShouldReturn2:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    [_heightTextField addTarget:self action:@selector(textFieldShouldReturnHeight:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    [_weightTextField addTarget:self action:@selector(textFieldShouldReturnWeight:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
     _addMeasuresActionButton.enabled = NO;
     
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturnHeight:(UITextField *)textField {
     if (_heightTextField == textField){
         _measures.height = _heightTextField.text;
-        NSLog(@"%@", textField.text);
         [_weightTextField becomeFirstResponder];
         return YES;
     }
     return NO;
 }
 
-- (BOOL)textFieldShouldReturn2:(UITextField *)textField {
+- (BOOL)textFieldShouldReturnWeight:(UITextField *)textField {
     if (_weightTextField == textField) {
         _measures.weight = _weightTextField.text;
-        NSLog(@"%@", textField.text);
         _addMeasuresActionButton.enabled = YES;
         return _measures.weight;
     }
@@ -57,6 +54,8 @@
     
     return NO;
 }
+
+#pragma mark - Buttons
 
 - (IBAction)addMeasuresActionButton:(UIButton *)sender {
     if (!_measures) {

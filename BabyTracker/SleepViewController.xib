@@ -62,7 +62,7 @@
                         <action selector="sleepTimerActionButton:" destination="-1" eventType="touchUpInside" id="cHB-0u-ciD"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
                     <rect key="frame" x="35" y="245" width="250" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="QFS-tn-0yW"/>

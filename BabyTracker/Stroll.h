@@ -10,4 +10,9 @@
 
 @interface Stroll : BaseDataObject
 
+@property (strong, nonatomic) NSDate* strollStart;
+@property (strong, nonatomic) NSDate* strollStop;
+@property (strong, nonatomic) NSDate* date;
+@property (strong, nonatomic) NSString* strollDuration;
+
 @end

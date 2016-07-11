@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) NSDate* date;
 @property (strong, nonatomic) NSString* foodType;
-@property (assign, nonatomic) NSNumber* foodQuantity;
+@property (assign, nonatomic) NSString* foodQuantity;
 
 @end

@@ -8,20 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
-@class Child, Sleep;
+@class Child, Sleep, Stroll;
 @interface ChildManager : NSObject
 
 @property (strong, nonatomic) NSMutableArray *childs;
 @property (strong, nonatomic) Child *child;
 @property (strong, nonatomic) Sleep *sleep;
+@property (strong, nonatomic) Stroll *stroll;
 @property (strong, nonatomic) NSString* path;
 
 + (instancetype)sharedInstance;
 - (void)saveData;
 
 - (void)addChild:(Child *)child;
+
 - (void)saveSleep;
 - (void)loadSleep;
 - (void)removeSleep;
+
+- (void)saveStroll;
+- (void)loadStroll;
+- (void)removeStroll;
 
 @end

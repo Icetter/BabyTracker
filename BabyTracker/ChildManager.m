@@ -9,6 +9,7 @@
 #import "ChildManager.h"
 #import "Child.h"
 #import "Sleep.h"
+#import "Stroll.h"
 
 @implementation ChildManager
 
@@ -54,14 +55,13 @@
         [array addObject:child.dictionary];
     }
     BOOL result = [array writeToFile:self.path atomically:YES];
-    NSLog(@"%@", @(result));
+    NSLog(@"%@", @(result) ? @"Saved" : @"Not saved");
     
 }
 
 - (NSString *)path {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
     _path = [NSString stringWithFormat:@"%@/childs.plist",paths.firstObject];
-    NSLog(@"%@", _path);
     return _path;
 }
 
@@ -81,6 +81,24 @@
 - (void)removeSleep {
     _sleep = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Current Sleep"];
+}
+
+#pragma mark - Stroll
+
+- (void)loadStroll {
+    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"Current Stroll"];
+    if (dict) {
+        _stroll = [[Stroll alloc] initWithDictionary:dict];
+    }
+}
+
+- (void)saveStroll {
+    [[NSUserDefaults standardUserDefaults] setObject:_stroll.dictionary forKey:@"Current Stroll"];
+}
+
+- (void)removeStroll {
+    _stroll = nil;
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Current Stroll"];
 }
 
 #pragma mark - Dealloc
