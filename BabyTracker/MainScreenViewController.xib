@@ -65,10 +65,10 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etF-9n-0Ij">
                     <rect key="frame" x="128" y="488" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="Zaz-0g-eX0"/>
-                        <constraint firstAttribute="width" constant="64" id="m6Z-Ra-xgI"/>
+                        <constraint firstAttribute="width" constant="64" id="XYT-Iz-qZW"/>
+                        <constraint firstAttribute="height" constant="64" id="gNc-FT-Az7"/>
                     </constraints>
-                    <state key="normal" title="List of timers" image="property_time"/>
+                    <state key="normal" title="List of timers" image="day_view"/>
                     <connections>
                         <action selector="timersListActionButton:" destination="-1" eventType="touchUpInside" id="csj-pB-gce"/>
                     </connections>
@@ -94,21 +94,20 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="hNK-7y-YT0" firstAttribute="top" secondItem="JcT-JU-PRi" secondAttribute="top" id="01K-ER-O7k"/>
+                <constraint firstItem="etF-9n-0Ij" firstAttribute="centerX" secondItem="mNc-gS-jCg" secondAttribute="centerX" id="07L-Rp-xl2"/>
                 <constraint firstAttribute="trailing" secondItem="JcT-JU-PRi" secondAttribute="trailing" constant="20" id="08A-22-fb4"/>
                 <constraint firstItem="0iP-Yw-ra3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="2Vj-0r-WZp"/>
                 <constraint firstItem="Me7-b7-K1U" firstAttribute="top" secondItem="DiW-1H-jA4" secondAttribute="bottom" constant="2" id="3BE-2t-VVw"/>
-                <constraint firstAttribute="bottom" secondItem="etF-9n-0Ij" secondAttribute="bottom" constant="16" id="59t-UW-pgD"/>
                 <constraint firstItem="hNK-7y-YT0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="5Iy-mO-qF1"/>
                 <constraint firstItem="mNc-gS-jCg" firstAttribute="top" secondItem="0iP-Yw-ra3" secondAttribute="bottom" constant="8" id="654-1G-457"/>
-                <constraint firstItem="etF-9n-0Ij" firstAttribute="top" secondItem="mNc-gS-jCg" secondAttribute="bottom" constant="90" id="ABX-x6-hfa"/>
                 <constraint firstAttribute="trailing" secondItem="DiW-1H-jA4" secondAttribute="trailing" constant="8" id="ANy-C4-Fqq"/>
                 <constraint firstItem="mNc-gS-jCg" firstAttribute="top" secondItem="VZH-FR-nrb" secondAttribute="bottom" constant="8" id="D8W-kz-nve"/>
                 <constraint firstItem="hNK-7y-YT0" firstAttribute="top" secondItem="mNc-gS-jCg" secondAttribute="bottom" constant="8" id="Djn-Pp-CxX"/>
+                <constraint firstItem="etF-9n-0Ij" firstAttribute="top" secondItem="mNc-gS-jCg" secondAttribute="bottom" constant="90" id="Etw-qN-qW4"/>
                 <constraint firstItem="mNc-gS-jCg" firstAttribute="top" secondItem="0iP-Yw-ra3" secondAttribute="bottom" constant="8" id="F2m-YL-gFe"/>
-                <constraint firstAttribute="trailing" secondItem="etF-9n-0Ij" secondAttribute="trailing" constant="128" id="LSk-cz-KD6"/>
+                <constraint firstAttribute="bottom" secondItem="etF-9n-0Ij" secondAttribute="bottom" constant="16" id="GI0-l6-Spk"/>
                 <constraint firstAttribute="trailing" secondItem="mNc-gS-jCg" secondAttribute="trailing" constant="60" id="UA5-B0-fgy"/>
                 <constraint firstItem="0iP-Yw-ra3" firstAttribute="top" secondItem="Me7-b7-K1U" secondAttribute="bottom" constant="2" id="cga-gG-Qau"/>
-                <constraint firstItem="etF-9n-0Ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="128" id="dhr-1p-eK6"/>
                 <constraint firstAttribute="trailing" secondItem="Me7-b7-K1U" secondAttribute="trailing" constant="8" id="dtd-dg-hlb"/>
                 <constraint firstAttribute="trailing" secondItem="VZH-FR-nrb" secondAttribute="trailing" constant="20" id="fQM-WN-6en"/>
                 <constraint firstItem="DiW-1H-jA4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="fxl-ve-71q"/>
@@ -131,9 +130,9 @@
     <resources>
         <image name="bottle" width="64" height="64"/>
         <image name="crib" width="64" height="64"/>
+        <image name="day_view" width="64" height="64"/>
         <image name="funny-baby-pictures-16" width="864" height="1024"/>
         <image name="health_book" width="64" height="64"/>
-        <image name="property_time" width="64" height="64"/>
         <image name="small bulleted_list" width="21" height="21"/>
         <image name="stroller" width="64" height="64"/>
     </resources>

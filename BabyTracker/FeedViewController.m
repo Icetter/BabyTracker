@@ -7,8 +7,6 @@
 //
 
 #import "FeedViewController.h"
-#import "ListViewController.h"
-#import "TimerViewController.h"
 #import "Feed.h"
 #import "ChildManager.h"
 #import "Child.h"
@@ -33,7 +31,7 @@
     
     _manager = [ChildManager sharedInstance];
     
-    self.foodArray = [NSArray arrayWithObjects:@"Left breast", @"Right breast", @"Racking", @"Infant formula", @"Milk porridge", @"Dairy-free porridge", @"Vegetable puree", @"Fruit puree", @"Meat puree", @"Fish puree", @"Juice", @"Water", @"Biscuit", nil];
+    self.foodArray = [NSArray arrayWithObjects:@"Левая грудь", @"Правая грудь", @"Сцеживание", @"Молочная смесь", @"Молочная каша", @"Безмолочная каша", @"Овощное пюре", @"Фруктовое пюре", @"Мясное пюре", @"Рыбное пюре", @"Сок", @"Вода", @"Печенье", nil];
     
     _foodPicker.delegate = self;
     _foodPicker.dataSource = self;
@@ -93,11 +91,4 @@
     [_foodPicker selectRow:0 inComponent:0 animated:YES];
 }
 
-- (IBAction)feedTimerActionButton:(id)sender {
-    [self.navigationController pushViewController:[TimerViewController new] animated:YES];
-}
-
-- (IBAction)feedListActionButton:(id)sender {
-    [self.navigationController pushViewController:[ListViewController new] animated:YES];
-}
 @end

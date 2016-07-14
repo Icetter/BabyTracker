@@ -15,7 +15,6 @@
 @property (strong, nonatomic) NSMutableArray *sleeps;
 @property (strong, nonatomic) NSMutableArray *feeds;
 @property (strong, nonatomic) NSMutableArray *strolls;
-@property (strong, nonatomic) NSMutableArray *timers;
 @property (strong, nonatomic) NSMutableArray *measures;
 
 @end

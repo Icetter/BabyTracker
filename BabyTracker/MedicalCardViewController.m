@@ -7,19 +7,19 @@
 //
 
 #import "MedicalCardViewController.h"
-#import "TimerViewController.h"
 #import "MeasuresViewController.h"
 #import "Measures.h"
 #import "ChildManager.h"
 #import "Child.h"
 
-@interface MedicalCardViewController ()
+@interface MedicalCardViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UILabel *measurementsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *heightLabel;
 @property (strong, nonatomic) IBOutlet UILabel *weightLabel;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Measures* measures;
 @property (weak, nonatomic) ChildManager *manager;
+@property (strong, nonatomic) NSArray *list;
 
 @end
 
@@ -28,24 +28,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _manager = [ChildManager sharedInstance];
-    if (!_measures) {
-        _measures = [Measures new];
+    [self updateLabels];
+    
+    if (_list == nil) {
+        _list = [NSArray array];
+    
+    NSDateFormatter* formatter = [NSDateFormatter new];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    NSString* dateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_measures.measureDate]];
+    NSString* tempString = [NSString stringWithFormat:@"%@ добавлены: рост %@см. и вес %@кг.", dateString, _measures.height, _measures.weight];
+    _list = [_list arrayByAddingObject:tempString];
     }
-    [_manager.child.measures lastObject];
-    _heightLabel.text = _measures.height;
-    _weightLabel.text = _measures.weight;
-    
-    
-}
-- (IBAction)addMeasuresActionButton:(UIButton *)sender {
-    [self.navigationController pushViewController:[MeasuresViewController new] animated:YES];
-}
-- (IBAction)addMedicalNoteActionButton:(id)sender {
 }
 
-- (IBAction)medicalTimerActionButton:(UIButton *)sender {
-    [self.navigationController pushViewController:[TimerViewController new] animated:YES];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [self updateLabels];
+}
+
+- (void)updateLabels {
+    _manager = [ChildManager sharedInstance];
+//        if (!_measures) {
+//            _measures = [Measures new];
+//        }
+    _measures = [_manager.child.measures lastObject];
+    _heightLabel.text = [NSString stringWithFormat:@"%@ см.", _measures.height];
+    _weightLabel.text = [NSString stringWithFormat:@"%@ кг.", _measures.weight];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _list.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = nil;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_list objectAtIndex:indexPath.row]];;
+    return cell;
+}
+
+- (IBAction)addMeasuresActionButton:(UIButton *)sender {
+    [self.navigationController pushViewController:[MeasuresViewController new] animated:YES];
 }
 
 @end

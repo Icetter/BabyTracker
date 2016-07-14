@@ -7,8 +7,16 @@
 //
 
 #import "SleepListViewController.h"
+#import "Sleep.h"
+#import "ChildManager.h"
+#import "Child.h"
 
-@interface SleepListViewController ()
+@interface SleepListViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) Sleep* sleep;
+@property (weak, nonatomic) ChildManager *manager;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSDate* date;
 
 @end
 
@@ -16,22 +24,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+     _manager = [ChildManager sharedInstance];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _manager.child.sleeps.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yyyy"];
+    _date = _sleep.date;
+    
+    NSString* cellText = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_date]];
+    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellText];
+    
+    cell.textLabel.text = _manager.child.sleeps[indexPath.row];
+    
+    return cell;
 }
-*/
 
 @end

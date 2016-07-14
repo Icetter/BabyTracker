@@ -7,8 +7,6 @@
 //
 
 #import "SleepViewController.h"
-#import "SleepListViewController.h"
-#import "TimerViewController.h"
 #import "Sleep.h"
 #import "ChildManager.h"
 #import "Child.h"
@@ -18,7 +16,6 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) IBOutlet UILabel *timerLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLapsedLabel;
-@property (strong, nonatomic) IBOutlet UILabel *babySleepsLabel;
 @property (strong, nonatomic) NSDate* startDate;
 @property (strong, nonatomic) NSDate* stoptDate;
 @property (strong, nonatomic) Sleep* sleep;
@@ -33,19 +30,14 @@
     [super viewDidLoad];
     _needSave = YES;
     _manager = [ChildManager sharedInstance];
+
    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [_manager loadSleep];
-    if (_manager.sleep) {
-        _sleep = _manager.sleep;
-        _startDate = _sleep.sleepStart;
-        _stoptDate = _sleep.sleepStop;
-    }
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    [self loadSleep];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -64,7 +56,7 @@
 
 - (void)updateTime {
     [self timerFrom:_startDate to:[NSDate date]];
-    [self timeLapsedFrom:_stoptDate to:[NSDate date]];
+    [self timeLapsedFrom:_manager.sleep.sleepStop to:[NSDate date]];
 }
 
 - (NSString *) stringTimeFrom:(NSDate*) date to:(NSDate*) date2{
@@ -82,18 +74,21 @@
         NSString* temp = [NSString string];
         
         if (second <= 60 && minute < 1 && hour < 1) {
-            temp =  [NSString stringWithFormat:@"%@ sec.", @(second)];
+            temp =  [NSString stringWithFormat:@"%@ сек.", @(second)];
         }
         if (minute >= 1 && hour < 1) {
-            temp = [NSString stringWithFormat:@"%@ min. %@ sec.",@(minute), @(second)];
+            temp = [NSString stringWithFormat:@"%@ мин. %@ сек.",@(minute), @(second)];
         }
-        if (hour >= 1) {
-            temp = [NSString stringWithFormat:@"%@ hours. @% min. %@ sec.", @(hour), @(minute),@(second)];
+        if (hour == 1) {
+            temp = [NSString stringWithFormat:@"%@ час @% мин. %@ сек.", @(hour), @(minute),@(second)];
+        }
+        if (hour > 1) {
+            temp = [NSString stringWithFormat:@"%@ часа @% мин. %@ сек.", @(hour), @(minute),@(second)];
         }
         return temp;
         
     } else {
-        return nil;
+        return @"No date";
     }
 }
 
@@ -126,6 +121,17 @@
     [_manager saveData];
 }
 
+- (void)loadSleep {
+    [_manager loadSleep];
+    if (_manager.sleep) {
+        _sleep = _manager.sleep;
+        _startDate = _sleep.sleepStart;
+        _stoptDate = _sleep.sleepStop;
+    }
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+
+}
+
 - (void)saveManager {
     if (_needSave) {
         _manager.sleep = _sleep;
@@ -148,22 +154,11 @@
     [_manager removeSleep];
     _stoptDate = date;
     [self saveSleep];
-   // _sleep = nil;
+    _sleep = nil;
     _timerLabel.text = [NSString stringWithFormat:@"Timer"];
     [self.timer invalidate];
-    self.timer = nil;
+//    self.timer = nil;
     
-}
-
-- (IBAction)addSleepActionButton:(id)sender {
-}
-
-- (IBAction)sleepTimerActionButton:(id)sender {
-    [self.navigationController pushViewController:[TimerViewController new] animated:YES];
-}
-
-- (IBAction)sleepListActionButton:(id)sender {
-    [self.navigationController pushViewController:[SleepListViewController new] animated:YES];
 }
 
 @end

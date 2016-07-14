@@ -13,7 +13,6 @@
 #import "StrollViewController.h"
 #import "AddChildViewController.h"
 #import "ListViewController.h"
-#import "TimerViewController.h"
 #import "MeasuresViewController.h"
 #import "Child.h"
 #import "ChildManager.h"
@@ -51,21 +50,28 @@
     NSInteger day = components.day;
     
     if (day <= 30 && month < 1 && year < 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ days", @(day)];
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ дней", @(day)];
 
     }
     if (month >= 1 && year < 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ months %@ days", @(month), @(day)];
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ мес. %@ days", @(month), @(day)];
     }
-    if (year >= 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ years %@ months %@ days", @(year), @(month), @(day)];
+    if (year == 1) {
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ год %@ мес. %@ дней", @(year), @(month), @(day)];
     }
-    
+    if (year > 1) {
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ года %@ мес. %@ дней", @(year), @(month), @(day)];
+    }
     
 
 //    NSString *name = [NSString stringWithFormat:@"%@", _child.dictionary[@"Name"]];
 //    NSLog(@"%@", name);
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [_childNameLabel reloadInputViews];
 }
 
 #pragma mark - Buttons

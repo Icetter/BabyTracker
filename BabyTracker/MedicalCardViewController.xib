@@ -19,87 +19,63 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88F-w3-VQU">
-                    <rect key="frame" x="90" y="111" width="55" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Рост" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88F-w3-VQU">
+                    <rect key="frame" x="90" y="111" width="50.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-uP-GsV">
-                    <rect key="frame" x="176" y="111" width="55" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-uP-GsV">
+                    <rect key="frame" x="178" y="111" width="67" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="55" id="cFX-OD-x1o"/>
+                        <constraint firstAttribute="width" constant="67" id="cFX-OD-x1o"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-jS-khp">
-                    <rect key="frame" x="33" y="471" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="64" id="49c-PV-lqN"/>
-                        <constraint firstAttribute="height" constant="64" id="TKO-49-OoL"/>
-                    </constraints>
-                    <state key="normal" title="Add Measures" image="scale"/>
-                    <connections>
-                        <action selector="addMeasuresActionButton:" destination="-1" eventType="touchUpInside" id="WRT-iu-2CC"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wT-W0-Apq">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Измерения:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wT-W0-Apq">
                     <rect key="frame" x="90" y="80" width="140" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="scg-6J-rFr">
                     <rect key="frame" x="8" y="140" width="304" height="323"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-44-mIt">
-                    <rect key="frame" x="223" y="471" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="64" id="hsB-3Y-N20"/>
-                        <constraint firstAttribute="height" constant="64" id="rka-TK-iPm"/>
-                    </constraints>
-                    <state key="normal" title="Add Timer" image="clock"/>
                     <connections>
-                        <action selector="medicalTimerActionButton:" destination="-1" eventType="touchUpInside" id="zTW-ZE-U4b"/>
+                        <outlet property="dataSource" destination="-1" id="Zmm-qO-CSg"/>
+                        <outlet property="delegate" destination="-1" id="Ghp-ya-dGQ"/>
                     </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD5-MM-tTh">
-                    <rect key="frame" x="128" y="471" width="64" height="64"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-jS-khp">
+                    <rect key="frame" x="128" y="474" width="64" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="GTQ-2o-xnO"/>
-                        <constraint firstAttribute="width" constant="64" id="eVU-yu-snh"/>
+                        <constraint firstAttribute="height" constant="64" id="T2k-en-bIx"/>
+                        <constraint firstAttribute="width" constant="64" id="pJk-rl-qje"/>
                     </constraints>
-                    <state key="normal" title="Add Note" image="treatment_plan"/>
+                    <state key="normal" title="Add Measures" image="scale"/>
                     <connections>
-                        <action selector="addMedicalNoteActionButton:" destination="-1" eventType="touchUpInside" id="Tch-IV-EHY"/>
+                        <action selector="addMeasuresActionButton:" destination="-1" eventType="touchUpInside" id="WRT-iu-2CC"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Jky-jS-khp" firstAttribute="top" secondItem="scg-6J-rFr" secondAttribute="bottom" constant="11" id="0o5-fq-kqH"/>
+                <constraint firstAttribute="bottom" secondItem="Jky-jS-khp" secondAttribute="bottom" constant="30" id="0yZ-3h-zUt"/>
                 <constraint firstItem="9wT-W0-Apq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="0zt-Zw-afU"/>
+                <constraint firstAttribute="trailing" secondItem="Jky-jS-khp" secondAttribute="trailing" constant="128" id="2Gy-Xa-elj"/>
+                <constraint firstAttribute="trailing" secondItem="scg-6J-rFr" secondAttribute="trailing" constant="8" id="37u-01-LXw"/>
                 <constraint firstItem="9wT-W0-Apq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="93D-4G-TCL"/>
-                <constraint firstItem="Frd-44-mIt" firstAttribute="leading" secondItem="mD5-MM-tTh" secondAttribute="trailing" constant="31" id="9bl-jF-J2S"/>
-                <constraint firstItem="KTn-uP-GsV" firstAttribute="leading" secondItem="88F-w3-VQU" secondAttribute="trailing" constant="31" id="CTy-5J-qlI"/>
                 <constraint firstItem="KTn-uP-GsV" firstAttribute="baseline" secondItem="88F-w3-VQU" secondAttribute="baseline" id="Eq9-Kt-EWl"/>
-                <constraint firstItem="mD5-MM-tTh" firstAttribute="leading" secondItem="Jky-jS-khp" secondAttribute="trailing" constant="31" id="Gm3-pJ-wHg"/>
                 <constraint firstAttribute="trailing" secondItem="9wT-W0-Apq" secondAttribute="trailing" constant="90" id="KX3-z2-nSW"/>
-                <constraint firstAttribute="trailing" secondItem="scg-6J-rFr" secondAttribute="trailing" constant="8" id="M1Q-OW-Sea"/>
-                <constraint firstAttribute="bottom" secondItem="Jky-jS-khp" secondAttribute="bottom" constant="33" id="OVW-sL-o9r"/>
                 <constraint firstItem="88F-w3-VQU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="ROL-Dc-dEB"/>
-                <constraint firstItem="mD5-MM-tTh" firstAttribute="top" secondItem="scg-6J-rFr" secondAttribute="bottom" constant="8" id="YU6-if-nSz"/>
-                <constraint firstItem="Jky-jS-khp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="Zhn-K2-KCU"/>
-                <constraint firstAttribute="trailing" secondItem="KTn-uP-GsV" secondAttribute="trailing" constant="89" id="d7O-AX-0t6"/>
-                <constraint firstAttribute="bottom" secondItem="mD5-MM-tTh" secondAttribute="bottom" constant="33" id="gEO-nn-wOQ"/>
-                <constraint firstItem="scg-6J-rFr" firstAttribute="top" secondItem="88F-w3-VQU" secondAttribute="bottom" constant="8" id="gj2-sD-eEa"/>
-                <constraint firstAttribute="trailing" secondItem="Frd-44-mIt" secondAttribute="trailing" constant="33" id="jZf-lA-NRs"/>
-                <constraint firstAttribute="bottom" secondItem="Frd-44-mIt" secondAttribute="bottom" constant="33" id="kuS-Vf-fCT"/>
+                <constraint firstItem="scg-6J-rFr" firstAttribute="top" secondItem="KTn-uP-GsV" secondAttribute="bottom" constant="8" id="WDZ-lx-meQ"/>
+                <constraint firstAttribute="trailing" secondItem="KTn-uP-GsV" secondAttribute="trailing" constant="75" id="d7O-AX-0t6"/>
+                <constraint firstItem="scg-6J-rFr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="f4l-gu-GB4"/>
+                <constraint firstItem="Jky-jS-khp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="128" id="qbJ-UX-sRj"/>
                 <constraint firstItem="88F-w3-VQU" firstAttribute="top" secondItem="9wT-W0-Apq" secondAttribute="bottom" constant="10" id="tNh-03-TPM"/>
-                <constraint firstItem="Frd-44-mIt" firstAttribute="top" secondItem="scg-6J-rFr" secondAttribute="bottom" constant="8" id="vO1-ZU-GWh"/>
-                <constraint firstItem="scg-6J-rFr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="xxd-fg-qb8"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -108,8 +84,6 @@
         </view>
     </objects>
     <resources>
-        <image name="clock" width="64" height="64"/>
         <image name="scale" width="64" height="64"/>
-        <image name="treatment_plan" width="64" height="64"/>
     </resources>
 </document>

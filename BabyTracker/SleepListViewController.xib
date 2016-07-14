@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepListViewController">
             <connections>
+                <outlet property="tableView" destination="22w-ic-Em7" id="Avb-ba-bwa"/>
                 <outlet property="view" destination="fDL-mD-O5C" id="BJ8-Bs-0Lf"/>
             </connections>
         </placeholder>
@@ -19,7 +20,8 @@
                     <rect key="frame" x="20" y="90" width="374" height="626"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="BJL-be-Q3v"/>
+                        <outlet property="dataSource" destination="-1" id="sa0-Dh-X2a"/>
+                        <outlet property="delegate" destination="-1" id="lEt-37-Rhk"/>
                     </connections>
                 </tableView>
             </subviews>

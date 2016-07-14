@@ -37,7 +37,6 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (_childNameTextField == textField){
         _child.name = _childNameTextField.text;
-        NSLog(@"%@", textField.text);
         _bottomPickerConstraint.constant = +120;
         _bottomTableView.constant = -1000;
          _childSaveActionButton.enabled = YES;
@@ -51,7 +50,6 @@
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd.MM.yyyy"];
     _child.birthDate =[formatter stringFromDate:_childAgePicker.date];
-    NSLog(@"%@", _child.birthDate);
     [[ChildManager sharedInstance] addChild:_child];
     [self.navigationController popViewControllerAnimated:YES];
     }

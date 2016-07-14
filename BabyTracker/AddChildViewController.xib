@@ -37,6 +37,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="sWQ-Sx-zRm"/>
+                    </connections>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hGq-d2-kwz">
                     <rect key="frame" x="35" y="278" width="250" height="250"/>
@@ -55,8 +58,12 @@
                         <!--2016-06-25 07:51:14 +0000-->
                     </date>
                 </datePicker>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYG-LD-V7p">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYG-LD-V7p">
                     <rect key="frame" x="35" y="170" width="250" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="eux-ie-h20"/>
+                        <constraint firstAttribute="height" constant="30" id="gdP-jP-kFt"/>
+                    </constraints>
                     <state key="normal" title="Save"/>
                     <connections>
                         <action selector="childSaveActionButton:" destination="-1" eventType="touchUpInside" id="rCC-Ok-2c7"/>
@@ -65,11 +72,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="sYG-LD-V7p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="4Re-hn-C50"/>
                 <constraint firstItem="jNI-TV-MWK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="4Up-ag-G3k"/>
                 <constraint firstAttribute="trailing" secondItem="jNI-TV-MWK" secondAttribute="trailing" constant="35" id="BeH-cm-H8y"/>
+                <constraint firstItem="sYG-LD-V7p" firstAttribute="leading" secondItem="ybt-0r-5MA" secondAttribute="leading" id="Cgb-Mz-x57"/>
                 <constraint firstItem="ybt-0r-5MA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Iks-DY-Jmt"/>
                 <constraint firstItem="jNI-TV-MWK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="JyA-Oo-p8L"/>
+                <constraint firstAttribute="trailing" secondItem="sYG-LD-V7p" secondAttribute="trailing" constant="35" id="LMR-yJ-jC6"/>
                 <constraint firstItem="Btr-3W-v5F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NiF-Id-TZT"/>
+                <constraint firstItem="sYG-LD-V7p" firstAttribute="top" secondItem="ybt-0r-5MA" secondAttribute="bottom" constant="15" id="NkK-EF-kr5"/>
                 <constraint firstAttribute="trailing" secondItem="hGq-d2-kwz" secondAttribute="trailing" constant="35" id="QJl-mF-cl0"/>
                 <constraint firstAttribute="trailing" secondItem="ybt-0r-5MA" secondAttribute="trailing" constant="35" id="RUP-4C-Wdt"/>
                 <constraint firstAttribute="bottom" secondItem="Btr-3W-v5F" secondAttribute="bottom" id="Ul0-cS-d1Y"/>

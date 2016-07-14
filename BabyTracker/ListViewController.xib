@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController">
             <connections>
+                <outlet property="tableView" destination="qDt-EH-kX2" id="ait-l5-tKb"/>
                 <outlet property="view" destination="gbF-8h-9O9" id="n8N-B9-Bix"/>
             </connections>
         </placeholder>
@@ -19,6 +20,7 @@
                     <rect key="frame" x="20" y="80" width="374" height="636"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
+                        <outlet property="dataSource" destination="-1" id="KQT-Sr-aOH"/>
                         <outlet property="delegate" destination="-1" id="lwF-Yw-cPL"/>
                     </connections>
                 </tableView>

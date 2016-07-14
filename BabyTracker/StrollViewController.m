@@ -7,7 +7,6 @@
 //
 
 #import "StrollViewController.h"
-#import "TimerViewController.h"
 #import "ListViewController.h"
 #import "Stroll.h"
 #import "ChildManager.h"
@@ -79,13 +78,16 @@
         NSString* temp = [NSString string];
         
         if (second <= 60 && minute < 1 && hour < 1) {
-            temp =  [NSString stringWithFormat:@"%@ sec.", @(second)];
+            temp =  [NSString stringWithFormat:@"%@ сек.", @(second)];
         }
         if (minute >= 1 && hour < 1) {
-            temp = [NSString stringWithFormat:@"%@ min. %@ sec.",@(minute), @(second)];
+            temp = [NSString stringWithFormat:@"%@ мин. %@ сек.",@(minute), @(second)];
         }
-        if (hour >= 1) {
-            temp = [NSString stringWithFormat:@"%@ hours. @% min. %@ sec.", @(hour), @(minute),@(second)];
+        if (hour == 1) {
+            temp = [NSString stringWithFormat:@"%@ час @% мин. %@ сек.", @(hour), @(minute),@(second)];
+        }
+        if (hour > 1) {
+            temp = [NSString stringWithFormat:@"%@ часа @% мин. %@ сек.", @(hour), @(minute),@(second)];
         }
         return temp;
         
@@ -148,13 +150,5 @@
     [self.timer invalidate];
     self.timer = nil;
 }
-- (IBAction)addStrollActionButton:(id)sender {
-}
-- (IBAction)strollTimerActionButton:(id)sender {
-    [self.navigationController pushViewController:[TimerViewController new] animated:YES];
-}
 
-- (IBAction)strollListActionButton:(id)sender {
-    [self.navigationController pushViewController:[ListViewController new] animated:YES];
-}
 @end

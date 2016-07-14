@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepViewController">
             <connections>
-                <outlet property="babySleepsLabel" destination="ExG-O7-Qka" id="SOx-wn-zTY"/>
                 <outlet property="timeLapsedLabel" destination="GwR-FF-sBV" id="CnW-GA-Dig"/>
                 <outlet property="timerLabel" destination="C0s-I9-RkG" id="NdV-Kd-BK9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,111 +17,70 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-2I-agj">
-                    <rect key="frame" x="30" y="120" width="90" height="90"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-2I-agj">
+                    <rect key="frame" x="35" y="165" width="90" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="PFX-iK-gaH"/>
-                        <constraint firstAttribute="width" constant="90" id="m9j-Vr-baV"/>
+                        <constraint firstAttribute="height" constant="90" id="Lip-F0-ZDU"/>
+                        <constraint firstAttribute="width" constant="90" id="gVB-hG-VNO"/>
                     </constraints>
                     <state key="normal" title="Sleep" image="sleep"/>
                     <connections>
                         <action selector="sleepStartActionButton:" destination="-1" eventType="touchUpInside" id="soN-5Z-XT9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvv-YO-X4r">
-                    <rect key="frame" x="200" y="120" width="90" height="90"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvv-YO-X4r">
+                    <rect key="frame" x="195" y="165" width="90" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="MhM-QG-7x2"/>
-                        <constraint firstAttribute="width" constant="90" id="ZKI-xX-iQB"/>
+                        <constraint firstAttribute="height" constant="90" id="24V-Xl-qVB"/>
+                        <constraint firstAttribute="width" constant="90" id="7hA-MX-C3w"/>
                     </constraints>
                     <state key="normal" title="Wake Up" image="babys_room"/>
                     <connections>
                         <action selector="sleepStopActionButton:" destination="-1" eventType="touchUpInside" id="bZG-xV-MAz"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-uw-6F7">
-                    <rect key="frame" x="40" y="478" width="50" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
+                    <rect key="frame" x="35" y="328" width="250" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="Hj4-up-kzr"/>
-                        <constraint firstAttribute="height" constant="50" id="lWm-0u-IBs"/>
-                    </constraints>
-                    <state key="normal" title="List" image="day_view"/>
-                    <connections>
-                        <action selector="sleepListActionButton:" destination="-1" eventType="touchUpInside" id="ENT-Mx-00z"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ni-ox-TXK">
-                    <rect key="frame" x="230" y="478" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="LJN-nI-toe"/>
-                        <constraint firstAttribute="height" constant="50" id="Qhh-fV-ida"/>
-                    </constraints>
-                    <state key="normal" title="Add Timer" image="clock"/>
-                    <connections>
-                        <action selector="sleepTimerActionButton:" destination="-1" eventType="touchUpInside" id="cHB-0u-ciD"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
-                    <rect key="frame" x="35" y="245" width="250" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="QFS-tn-0yW"/>
-                        <constraint firstAttribute="width" constant="250" id="WO5-Rc-OMm"/>
+                        <constraint firstAttribute="height" constant="80" id="CbA-ZE-xNE"/>
+                        <constraint firstAttribute="width" constant="250" id="HiC-kp-BpO"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time since last sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-FF-sBV">
-                    <rect key="frame" x="35" y="80" width="250" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="5t5-fJ-kqX"/>
-                        <constraint firstAttribute="width" constant="250" id="ZtG-1o-0fv"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прогулка длится:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-of-xCZ">
+                    <rect key="frame" x="35" y="299" width="250" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-Qf-9fe">
-                    <rect key="frame" x="128" y="385" width="64" height="64"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прошло времени..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-FF-sBV">
+                    <rect key="frame" x="35" y="100" width="250" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="Ntg-7z-Cpf"/>
-                        <constraint firstAttribute="width" constant="64" id="whX-BB-V6t"/>
+                        <constraint firstAttribute="width" constant="250" id="hFl-l2-kAZ"/>
+                        <constraint firstAttribute="height" constant="30" id="wdO-Fd-dc3"/>
                     </constraints>
-                    <state key="normal" title="Add Sleep" image="plus"/>
-                    <connections>
-                        <action selector="addSleepActionButton:" destination="-1" eventType="touchUpInside" id="r8H-rG-b9h"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby sleeps for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExG-O7-Qka">
-                    <rect key="frame" x="88" y="216" width="144" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="nvv-YO-X4r" secondAttribute="trailing" constant="30" id="1kj-hz-qWi"/>
-                <constraint firstItem="GwR-FF-sBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="8Wv-r4-iGP"/>
-                <constraint firstItem="h4Q-uw-6F7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="MD7-Ac-A5E"/>
-                <constraint firstItem="C0s-I9-RkG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Muy-wJ-Bxz"/>
-                <constraint firstAttribute="trailing" secondItem="C0s-I9-RkG" secondAttribute="trailing" constant="35" id="QbI-dr-WmC"/>
-                <constraint firstItem="h4W-2I-agj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="RI1-eh-dlm"/>
-                <constraint firstItem="h4W-2I-agj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="SjV-Xk-E4L"/>
-                <constraint firstItem="GwR-FF-sBV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Toa-Ta-liA"/>
-                <constraint firstItem="nvv-YO-X4r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="Wvi-RO-YiY"/>
-                <constraint firstItem="C0s-I9-RkG" firstAttribute="top" secondItem="ExG-O7-Qka" secondAttribute="bottom" constant="8" id="Y2G-CU-qdg"/>
-                <constraint firstItem="ApF-Qf-9fe" firstAttribute="top" secondItem="C0s-I9-RkG" secondAttribute="bottom" constant="60" id="aOe-aV-XOS"/>
-                <constraint firstAttribute="bottom" secondItem="h4Q-uw-6F7" secondAttribute="bottom" constant="40" id="bSq-Kp-OMX"/>
-                <constraint firstItem="ExG-O7-Qka" firstAttribute="top" secondItem="nvv-YO-X4r" secondAttribute="bottom" constant="6" id="eeq-bN-u0Y"/>
-                <constraint firstItem="ExG-O7-Qka" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="88" id="fG5-Wl-PoV"/>
-                <constraint firstAttribute="bottom" secondItem="1ni-ox-TXK" secondAttribute="bottom" constant="40" id="gB1-Xa-OCk"/>
-                <constraint firstAttribute="trailing" secondItem="GwR-FF-sBV" secondAttribute="trailing" constant="35" id="kUV-zm-uBt"/>
-                <constraint firstAttribute="trailing" secondItem="ApF-Qf-9fe" secondAttribute="trailing" constant="128" id="p4Q-By-N1l"/>
-                <constraint firstAttribute="trailing" secondItem="ExG-O7-Qka" secondAttribute="trailing" constant="88" id="rzy-Vt-gPS"/>
-                <constraint firstAttribute="trailing" secondItem="1ni-ox-TXK" secondAttribute="trailing" constant="40" id="tIk-Kw-AkR"/>
-                <constraint firstItem="ApF-Qf-9fe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="128" id="wAO-v9-wiq"/>
-                <constraint firstItem="C0s-I9-RkG" firstAttribute="top" secondItem="nvv-YO-X4r" secondAttribute="bottom" constant="35" id="zvU-zt-uAz"/>
+                <constraint firstAttribute="trailing" secondItem="jsr-of-xCZ" secondAttribute="trailing" constant="35" id="0aU-sb-E9L"/>
+                <constraint firstItem="h4W-2I-agj" firstAttribute="top" secondItem="GwR-FF-sBV" secondAttribute="bottom" constant="35" id="855-5n-Swm"/>
+                <constraint firstAttribute="trailing" secondItem="C0s-I9-RkG" secondAttribute="trailing" constant="35" id="DbO-2W-Bib"/>
+                <constraint firstAttribute="bottom" secondItem="C0s-I9-RkG" secondAttribute="bottom" constant="160" id="HGe-mC-4IP"/>
+                <constraint firstItem="nvv-YO-X4r" firstAttribute="top" secondItem="GwR-FF-sBV" secondAttribute="bottom" constant="35" id="M2W-mn-pl6"/>
+                <constraint firstItem="jsr-of-xCZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Tqo-Fx-tBd"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="X4n-lQ-Qyg"/>
+                <constraint firstItem="GwR-FF-sBV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="heb-BA-77z"/>
+                <constraint firstAttribute="trailing" secondItem="GwR-FF-sBV" secondAttribute="trailing" constant="35" id="jZ3-DE-pdg"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="top" secondItem="jsr-of-xCZ" secondAttribute="bottom" constant="8" id="rwh-qK-FQ2"/>
+                <constraint firstItem="h4W-2I-agj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="sM5-0p-Gmi"/>
+                <constraint firstItem="GwR-FF-sBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="sPN-ri-MR0"/>
+                <constraint firstAttribute="trailing" secondItem="nvv-YO-X4r" secondAttribute="trailing" constant="35" id="xvj-S7-6Gs"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -131,9 +89,6 @@
     </objects>
     <resources>
         <image name="babys_room" width="64" height="64"/>
-        <image name="clock" width="64" height="64"/>
-        <image name="day_view" width="64" height="64"/>
-        <image name="plus" width="64" height="64"/>
         <image name="sleep" width="64" height="64"/>
     </resources>
 </document>
