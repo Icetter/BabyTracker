@@ -18,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-2I-agj">
-                    <rect key="frame" x="35" y="165" width="90" height="90"/>
+                    <rect key="frame" x="35" y="378" width="90" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="Lip-F0-ZDU"/>
-                        <constraint firstAttribute="width" constant="90" id="gVB-hG-VNO"/>
+                        <constraint firstAttribute="height" constant="90" id="X6A-pk-hr6"/>
+                        <constraint firstAttribute="width" constant="90" id="abr-3O-MPO"/>
                     </constraints>
                     <state key="normal" title="Sleep" image="sleep"/>
                     <connections>
@@ -29,10 +29,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvv-YO-X4r">
-                    <rect key="frame" x="195" y="165" width="90" height="90"/>
+                    <rect key="frame" x="195" y="378" width="90" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="24V-Xl-qVB"/>
-                        <constraint firstAttribute="width" constant="90" id="7hA-MX-C3w"/>
+                        <constraint firstAttribute="height" constant="90" id="0QD-JW-7m6"/>
+                        <constraint firstAttribute="width" constant="90" id="tHt-ng-2ga"/>
                     </constraints>
                     <state key="normal" title="Wake Up" image="babys_room"/>
                     <connections>
@@ -40,51 +40,75 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
-                    <rect key="frame" x="35" y="328" width="250" height="80"/>
+                    <rect key="frame" x="35" y="234" width="250" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="CbA-ZE-xNE"/>
-                        <constraint firstAttribute="width" constant="250" id="HiC-kp-BpO"/>
+                        <constraint firstAttribute="width" constant="250" id="KST-eL-ES9"/>
+                        <constraint firstAttribute="height" constant="100" id="x55-gP-H5w"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прогулка длится:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-of-xCZ">
-                    <rect key="frame" x="35" y="299" width="250" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сон длится:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-of-xCZ">
+                    <rect key="frame" x="35" y="203" width="250" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прошло времени..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-FF-sBV">
-                    <rect key="frame" x="35" y="100" width="250" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прошло времени с прошлого сна:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-FF-sBV">
+                    <rect key="frame" x="35" y="110" width="250" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="hFl-l2-kAZ"/>
-                        <constraint firstAttribute="height" constant="30" id="wdO-Fd-dc3"/>
+                        <constraint firstAttribute="height" constant="40" id="wdO-Fd-dc3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоп" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-fx-6zB">
+                    <rect key="frame" x="221" y="476" width="40" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="g6n-Yx-EJg"/>
+                        <constraint firstAttribute="width" constant="40" id="hqA-Qp-Lq2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Старт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a77-cD-OpV">
+                    <rect key="frame" x="53" y="476" width="48" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="ktG-iQ-xKb"/>
+                        <constraint firstAttribute="height" constant="21" id="p33-TU-aug"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="jsr-of-xCZ" secondAttribute="trailing" constant="35" id="0aU-sb-E9L"/>
-                <constraint firstItem="h4W-2I-agj" firstAttribute="top" secondItem="GwR-FF-sBV" secondAttribute="bottom" constant="35" id="855-5n-Swm"/>
-                <constraint firstAttribute="trailing" secondItem="C0s-I9-RkG" secondAttribute="trailing" constant="35" id="DbO-2W-Bib"/>
-                <constraint firstAttribute="bottom" secondItem="C0s-I9-RkG" secondAttribute="bottom" constant="160" id="HGe-mC-4IP"/>
-                <constraint firstItem="nvv-YO-X4r" firstAttribute="top" secondItem="GwR-FF-sBV" secondAttribute="bottom" constant="35" id="M2W-mn-pl6"/>
-                <constraint firstItem="jsr-of-xCZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Tqo-Fx-tBd"/>
-                <constraint firstItem="C0s-I9-RkG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="X4n-lQ-Qyg"/>
+                <constraint firstItem="jsr-of-xCZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="Nk0-wv-cM1"/>
+                <constraint firstAttribute="trailing" secondItem="nvv-YO-X4r" secondAttribute="trailing" constant="35" id="Npb-9h-daV"/>
+                <constraint firstItem="a77-cD-OpV" firstAttribute="top" secondItem="h4W-2I-agj" secondAttribute="bottom" constant="8" id="QZT-GB-gfa"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RBa-rd-KDm"/>
+                <constraint firstAttribute="bottom" secondItem="h4W-2I-agj" secondAttribute="bottom" constant="100" id="RlH-uV-QnF"/>
+                <constraint firstItem="h4W-2I-agj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="WEP-o4-j3j"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="top" secondItem="jsr-of-xCZ" secondAttribute="bottom" constant="10" id="c2m-mQ-NIN"/>
+                <constraint firstAttribute="trailing" secondItem="lNM-fx-6zB" secondAttribute="trailing" constant="59" id="dPz-3Z-JrZ"/>
+                <constraint firstItem="C0s-I9-RkG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hZ8-Gk-h3a"/>
                 <constraint firstItem="GwR-FF-sBV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="heb-BA-77z"/>
+                <constraint firstItem="a77-cD-OpV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="53" id="ia3-P8-UDo"/>
                 <constraint firstAttribute="trailing" secondItem="GwR-FF-sBV" secondAttribute="trailing" constant="35" id="jZ3-DE-pdg"/>
-                <constraint firstItem="C0s-I9-RkG" firstAttribute="top" secondItem="jsr-of-xCZ" secondAttribute="bottom" constant="8" id="rwh-qK-FQ2"/>
-                <constraint firstItem="h4W-2I-agj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="sM5-0p-Gmi"/>
-                <constraint firstItem="GwR-FF-sBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="sPN-ri-MR0"/>
-                <constraint firstAttribute="trailing" secondItem="nvv-YO-X4r" secondAttribute="trailing" constant="35" id="xvj-S7-6Gs"/>
+                <constraint firstAttribute="bottom" secondItem="nvv-YO-X4r" secondAttribute="bottom" constant="100" id="nel-4e-VVW"/>
+                <constraint firstItem="GwR-FF-sBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="sPN-ri-MR0"/>
+                <constraint firstItem="lNM-fx-6zB" firstAttribute="top" secondItem="nvv-YO-X4r" secondAttribute="bottom" constant="8" id="slU-OW-vRU"/>
+                <constraint firstAttribute="trailing" secondItem="jsr-of-xCZ" secondAttribute="trailing" constant="35" id="yuy-LK-nI7"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="367" y="222"/>
         </view>
     </objects>
     <resources>

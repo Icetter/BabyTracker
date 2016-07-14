@@ -21,7 +21,6 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="funny-baby-pictures-16" translatesAutoresizingMaskIntoConstraints="NO" id="mNc-gS-jCg">
                     <rect key="frame" x="60" y="198" width="200" height="200"/>
-                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcT-JU-PRi">
                     <rect key="frame" x="236" y="406" width="64" height="64"/>
@@ -29,7 +28,7 @@
                         <constraint firstAttribute="width" constant="64" id="YUc-PK-5ur"/>
                         <constraint firstAttribute="height" constant="64" id="a1p-Fc-sfM"/>
                     </constraints>
-                    <state key="normal" title="Medical card" image="health_book"/>
+                    <state key="normal" title="Medical card" image="sewing_tape_measure"/>
                     <connections>
                         <action selector="medicalCardButtonAction:" destination="-1" eventType="touchUpInside" id="Zyy-N0-Aqt"/>
                     </connections>
@@ -132,7 +131,7 @@
         <image name="crib" width="64" height="64"/>
         <image name="day_view" width="64" height="64"/>
         <image name="funny-baby-pictures-16" width="864" height="1024"/>
-        <image name="health_book" width="64" height="64"/>
+        <image name="sewing_tape_measure" width="64" height="64"/>
         <image name="small bulleted_list" width="21" height="21"/>
         <image name="stroller" width="64" height="64"/>
     </resources>

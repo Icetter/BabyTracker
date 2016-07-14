@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		441579BB1D28BC1800300220 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441579B91D28BC1800300220 /* BaseViewController.m */; };
 		441579BC1D28BC1800300220 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 441579BA1D28BC1800300220 /* BaseViewController.xib */; };
-		441DDFFB1D3377BE00171D5B /* SleepListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441DDFF91D3377BE00171D5B /* SleepListViewController.m */; };
-		441DDFFC1D3377BE00171D5B /* SleepListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 441DDFFA1D3377BE00171D5B /* SleepListViewController.xib */; };
 		446899751D0D886F00CD573B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899741D0D886F00CD573B /* main.m */; };
 		446899781D0D886F00CD573B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 446899771D0D886F00CD573B /* AppDelegate.m */; };
 		446899801D0D886F00CD573B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4468997F1D0D886F00CD573B /* Assets.xcassets */; };
@@ -62,9 +60,6 @@
 		441579B81D28BC1800300220 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		441579B91D28BC1800300220 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		441579BA1D28BC1800300220 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
-		441DDFF81D3377BE00171D5B /* SleepListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepListViewController.h; sourceTree = "<group>"; };
-		441DDFF91D3377BE00171D5B /* SleepListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepListViewController.m; sourceTree = "<group>"; };
-		441DDFFA1D3377BE00171D5B /* SleepListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepListViewController.xib; sourceTree = "<group>"; };
 		446899701D0D886F00CD573B /* BabyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446899741D0D886F00CD573B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		446899761D0D886F00CD573B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,16 +145,6 @@
 				441579BA1D28BC1800300220 /* BaseViewController.xib */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		441DDFFD1D3377C200171D5B /* SleepList */ = {
-			isa = PBXGroup;
-			children = (
-				441DDFF81D3377BE00171D5B /* SleepListViewController.h */,
-				441DDFF91D3377BE00171D5B /* SleepListViewController.m */,
-				441DDFFA1D3377BE00171D5B /* SleepListViewController.xib */,
-			);
-			name = SleepList;
 			sourceTree = "<group>";
 		};
 		446899671D0D886F00CD573B = {
@@ -346,7 +331,6 @@
 		44D6AF281D15341800C12DE4 /* Sleep */ = {
 			isa = PBXGroup;
 			children = (
-				441DDFFD1D3377C200171D5B /* SleepList */,
 				44D6AF111D15331800C12DE4 /* SleepViewController.h */,
 				44D6AF121D15331800C12DE4 /* SleepViewController.m */,
 				44D6AF131D15331800C12DE4 /* SleepViewController.xib */,
@@ -507,7 +491,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441DDFFC1D3377BE00171D5B /* SleepListViewController.xib in Resources */,
 				44D6AF201D1533AF00C12DE4 /* StrollViewController.xib in Resources */,
 				44D6AF0B1D15329800C12DE4 /* MainScreenViewController.xib in Resources */,
 				44D6AF1B1D15337E00C12DE4 /* FeedViewController.xib in Resources */,
@@ -552,7 +535,6 @@
 				44881AFC1D2784EB00373A25 /* BaseDataObject.m in Sources */,
 				44D914201D275FB800DEE5F0 /* MeasuresViewController.m in Sources */,
 				441579BB1D28BC1800300220 /* BaseViewController.m in Sources */,
-				441DDFFB1D3377BE00171D5B /* SleepListViewController.m in Sources */,
 				44881B011D27B72C00373A25 /* Sleep.m in Sources */,
 				447B7FE81D2CF61F009B8018 /* Measures.m in Sources */,
 				44D6AF0F1D1532B900C12DE4 /* AddChildViewController.m in Sources */,

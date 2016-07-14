@@ -33,15 +33,28 @@
     _feed = [_manager.child.feeds lastObject];
     _stroll = [_manager.child.strolls lastObject];
     
+    NSDateFormatter* formatter = [NSDateFormatter new];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    NSString* sleepDateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_sleep.date]];
+    NSString* feedDateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_feed.date]];
+    NSString* strollDateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_stroll.date]];
+    
+    NSString* sleepTempString = [NSString stringWithFormat:@"%@ сон длился: %@", sleepDateString, _sleep.sleepDuration];
+    NSString* feedTempString = [NSString stringWithFormat:@"%@ %@ %@мл.", feedDateString, _feed.foodType, _feed.foodQuantity];
+    NSString* strollTempString = [NSString stringWithFormat:@"%@ прогулка длилась: %@", strollDateString, _stroll.strollDuration];
+    
+    
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return _list.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView init];
+    UITableViewCell *cell = nil;
     
     
     

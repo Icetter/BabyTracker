@@ -18,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJf-Vv-Dw0">
-                    <rect key="frame" x="35" y="165" width="90" height="90"/>
+                    <rect key="frame" x="35" y="378" width="90" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="90" id="L5R-uY-mwJ"/>
-                        <constraint firstAttribute="height" constant="90" id="tgM-06-bwY"/>
+                        <constraint firstAttribute="height" constant="90" id="cHw-X2-S5k"/>
+                        <constraint firstAttribute="width" constant="90" id="wua-7u-Oam"/>
                     </constraints>
                     <state key="normal" title="Go out" image="baby_feet"/>
                     <connections>
@@ -29,20 +29,20 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ5-X1-Wvs">
-                    <rect key="frame" x="195" y="165" width="90" height="90"/>
+                    <rect key="frame" x="195" y="378" width="90" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="dV8-qX-WZa"/>
-                        <constraint firstAttribute="width" constant="90" id="lTN-15-5EL"/>
+                        <constraint firstAttribute="height" constant="90" id="Xrp-xu-Fhe"/>
+                        <constraint firstAttribute="width" constant="90" id="uDG-8K-aAs"/>
                     </constraints>
                     <state key="normal" title="Come home" image="home"/>
                     <connections>
                         <action selector="cameFromActionButton:" destination="-1" eventType="touchUpInside" id="3Mg-ff-odo"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прошло времени..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCO-Gy-7kB">
-                    <rect key="frame" x="35" y="100" width="250" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прошло времени с прошлой прогулки:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="vCO-Gy-7kB">
+                    <rect key="frame" x="35" y="100" width="250" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="52i-KY-yTf"/>
+                        <constraint firstAttribute="height" constant="40" id="52i-KY-yTf"/>
                         <constraint firstAttribute="width" constant="250" id="YMY-IW-9KY"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -50,38 +50,63 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-X9-ET4">
-                    <rect key="frame" x="35" y="328" width="250" height="80"/>
+                    <rect key="frame" x="35" y="234" width="250" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="2aO-Ag-7W1"/>
-                        <constraint firstAttribute="width" constant="250" id="LjZ-nn-cmC"/>
+                        <constraint firstAttribute="width" constant="250" id="CI9-4q-iAb"/>
+                        <constraint firstAttribute="height" constant="100" id="RxL-ZB-pTx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прогулка длится:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn9-to-B20">
-                    <rect key="frame" x="35" y="299" width="250" height="21"/>
+                    <rect key="frame" x="35" y="193" width="250" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Старт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyI-zD-ZDE">
+                    <rect key="frame" x="56" y="476" width="48" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="PP1-Ed-Iqd"/>
+                        <constraint firstAttribute="height" constant="21" id="k5o-5I-lmG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоп" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9C-PW-JFd">
+                    <rect key="frame" x="220" y="476" width="40" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="UzB-Mn-NGK"/>
+                        <constraint firstAttribute="height" constant="21" id="l5x-t7-Qek"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="vCO-Gy-7kB" secondAttribute="trailing" constant="35" id="1Ms-Ec-SXl"/>
+                <constraint firstAttribute="trailing" secondItem="bn9-to-B20" secondAttribute="trailing" constant="35" id="1XJ-7y-8Cs"/>
+                <constraint firstAttribute="trailing" secondItem="M9C-PW-JFd" secondAttribute="trailing" constant="60" id="55d-5J-xLW"/>
                 <constraint firstItem="JJf-Vv-Dw0" firstAttribute="top" secondItem="vCO-Gy-7kB" secondAttribute="bottom" constant="35" id="65Q-Ro-Rem"/>
-                <constraint firstItem="rX4-X9-ET4" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="9G8-W7-qsH"/>
-                <constraint firstAttribute="bottom" secondItem="rX4-X9-ET4" secondAttribute="bottom" constant="160" id="Ara-dv-k6N"/>
-                <constraint firstItem="bn9-to-B20" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="B4j-Tp-3DG"/>
-                <constraint firstAttribute="trailing" secondItem="rX4-X9-ET4" secondAttribute="trailing" constant="35" id="Ff3-Xg-0pI"/>
-                <constraint firstItem="rX4-X9-ET4" firstAttribute="top" secondItem="bn9-to-B20" secondAttribute="bottom" constant="8" id="JmO-U8-OR0"/>
+                <constraint firstItem="bn9-to-B20" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="7br-fO-rdJ"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="centerX" secondItem="ufs-yR-kos" secondAttribute="centerX" id="Hao-1z-l4e"/>
                 <constraint firstItem="rX4-X9-ET4" firstAttribute="top" secondItem="kJ5-X1-Wvs" secondAttribute="bottom" constant="35" id="LTf-Or-TO5"/>
+                <constraint firstAttribute="bottom" secondItem="JJf-Vv-Dw0" secondAttribute="bottom" constant="100" id="NOv-0n-QWg"/>
                 <constraint firstItem="vCO-Gy-7kB" firstAttribute="top" secondItem="ufs-yR-kos" secondAttribute="top" constant="100" id="aQj-jl-cyB"/>
+                <constraint firstItem="M9C-PW-JFd" firstAttribute="top" secondItem="kJ5-X1-Wvs" secondAttribute="bottom" constant="8" id="afw-Qm-U6j"/>
+                <constraint firstItem="wyI-zD-ZDE" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="56" id="biU-gv-bj4"/>
+                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="fk0-IE-klw"/>
                 <constraint firstItem="vCO-Gy-7kB" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="gJl-dG-HCX"/>
-                <constraint firstItem="JJf-Vv-Dw0" firstAttribute="leading" secondItem="ufs-yR-kos" secondAttribute="leading" constant="35" id="gOl-Oa-4Kl"/>
-                <constraint firstAttribute="trailing" secondItem="bn9-to-B20" secondAttribute="trailing" constant="35" id="odo-m4-zp2"/>
+                <constraint firstAttribute="trailing" secondItem="kJ5-X1-Wvs" secondAttribute="trailing" constant="35" id="igv-sl-r6U"/>
+                <constraint firstItem="wyI-zD-ZDE" firstAttribute="top" secondItem="JJf-Vv-Dw0" secondAttribute="bottom" constant="8" id="k8d-NN-geB"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="top" secondItem="bn9-to-B20" secondAttribute="bottom" constant="20" id="nOV-sT-riV"/>
                 <constraint firstItem="kJ5-X1-Wvs" firstAttribute="top" secondItem="vCO-Gy-7kB" secondAttribute="bottom" constant="35" id="pCN-3I-DaF"/>
-                <constraint firstAttribute="trailing" secondItem="kJ5-X1-Wvs" secondAttribute="trailing" constant="35" id="rAg-zu-kEz"/>
+                <constraint firstAttribute="bottom" secondItem="kJ5-X1-Wvs" secondAttribute="bottom" constant="100" id="per-Ad-xCx"/>
+                <constraint firstItem="rX4-X9-ET4" firstAttribute="centerY" secondItem="ufs-yR-kos" secondAttribute="centerY" id="yoD-HT-lQg"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -89,6 +114,8 @@
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="LTf-Or-TO5"/>
+                    <exclude reference="65Q-Ro-Rem"/>
+                    <exclude reference="pCN-3I-DaF"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="252" y="307"/>

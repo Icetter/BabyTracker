@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text: Add your child" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNI-TV-MWK">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите имя и дату рождения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNI-TV-MWK">
                     <rect key="frame" x="35" y="80" width="250" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="5P1-Ot-amS"/>
@@ -30,13 +30,13 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybt-0r-5MA">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybt-0r-5MA">
                     <rect key="frame" x="35" y="125" width="250" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="uIp-qv-9UC"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="sWQ-Sx-zRm"/>
                     </connections>
@@ -64,7 +64,7 @@
                         <constraint firstAttribute="width" constant="250" id="eux-ie-h20"/>
                         <constraint firstAttribute="height" constant="30" id="gdP-jP-kFt"/>
                     </constraints>
-                    <state key="normal" title="Save"/>
+                    <state key="normal" title="Сохранить"/>
                     <connections>
                         <action selector="childSaveActionButton:" destination="-1" eventType="touchUpInside" id="rCC-Ok-2c7"/>
                     </connections>
