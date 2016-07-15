@@ -31,7 +31,7 @@
     
     _manager = [ChildManager sharedInstance];
     
-    self.foodArray = [NSArray arrayWithObjects:@"Левая грудь", @"Правая грудь", @"Сцеживание", @"Молочная смесь", @"Молочная каша", @"Безмолочная каша", @"Овощное пюре", @"Фруктовое пюре", @"Мясное пюре", @"Рыбное пюре", @"Сок", @"Вода", @"Печенье", nil];
+    self.foodArray = [NSArray arrayWithObjects:@"Left breast", @"Right breast", @"Racking", @"Infant formula", @"Milk porridge", @"Dairy-free porridge", @"Vegetable puree", @"Fruit puree", @"Meat puree", @"Fish puree", @"Juice", @"Water", @"Biscuit", nil]; 
     
     _foodPicker.delegate = self;
     _foodPicker.dataSource = self;

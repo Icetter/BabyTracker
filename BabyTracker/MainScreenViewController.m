@@ -50,17 +50,17 @@
     NSInteger day = components.day;
     
     if (day <= 30 && month < 1 && year < 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ дней", @(day)];
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ days", @(day)];
 
     }
     if (month >= 1 && year < 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ мес. %@ days", @(month), @(day)];
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ months %@ days", @(month), @(day)];
     }
     if (year == 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ год %@ мес. %@ дней", @(year), @(month), @(day)];
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ year %@ months %@ days", @(year), @(month), @(day)];
     }
     if (year > 1) {
-        _childAgeLabel.text = [NSString stringWithFormat:@"%@ года %@ мес. %@ дней", @(year), @(month), @(day)];
+        _childAgeLabel.text = [NSString stringWithFormat:@"%@ years %@ months %@ days", @(year), @(month), @(day)];
     }
     
 

@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "446899881D0D886F00CD573B"
-               BuildableName = "BabyTrackerTests.xctest"
+               BuildableName = "BabyTracker.xctest"
                BlueprintName = "BabyTrackerTests"
                ReferencedContainer = "container:BabyTracker.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "446899931D0D886F00CD573B"
-               BuildableName = "BabyTrackerUITests.xctest"
+               BuildableName = "BabyTracker.xctest"
                BlueprintName = "BabyTrackerUITests"
                ReferencedContainer = "container:BabyTracker.xcodeproj">
             </BuildableReference>

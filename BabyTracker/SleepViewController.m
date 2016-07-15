@@ -74,16 +74,16 @@
         NSString* temp = [NSString string];
         
         if (second <= 60 && minute < 1 && hour < 1) {
-            temp =  [NSString stringWithFormat:@"%@ сек.", @(second)];
+            temp =  [NSString stringWithFormat:@"%@ sec.", @(second)];
         }
         if (minute >= 1 && hour < 1) {
-            temp = [NSString stringWithFormat:@"%@ мин. %@ сек.",@(minute), @(second)];
+            temp = [NSString stringWithFormat:@"%@ min. %@ sec.",@(minute), @(second)];
         }
         if (hour == 1) {
-            temp = [NSString stringWithFormat:@"%@ час @% мин. %@ сек.", @(hour), @(minute),@(second)];
+            temp = [NSString stringWithFormat:@"%@ hour @% min. %@ sec.", @(hour), @(minute),@(second)];
         }
         if (hour > 1) {
-            temp = [NSString stringWithFormat:@"%@ часа @% мин. %@ сек.", @(hour), @(minute),@(second)];
+            temp = [NSString stringWithFormat:@"%@ hours @% min. %@ sec.", @(hour), @(minute),@(second)];
         }
         return temp;
         

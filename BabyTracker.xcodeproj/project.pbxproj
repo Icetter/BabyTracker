@@ -66,10 +66,10 @@
 		446899771D0D886F00CD573B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4468997F1D0D886F00CD573B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446899841D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		446899891D0D886F00CD573B /* BabyTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		446899891D0D886F00CD573B /* BabyTracker.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTracker.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4468998D1D0D886F00CD573B /* BabyTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTrackerTests.m; sourceTree = "<group>"; };
 		4468998F1D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		446899941D0D886F00CD573B /* BabyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		446899941D0D886F00CD573B /* BabyTracker.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTracker.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446899981D0D886F00CD573B /* BabyTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTrackerUITests.m; sourceTree = "<group>"; };
 		4468999A1D0D886F00CD573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447B7FE61D2CF61F009B8018 /* Measures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measures.h; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				446899701D0D886F00CD573B /* BabyTracker.app */,
-				446899891D0D886F00CD573B /* BabyTrackerTests.xctest */,
-				446899941D0D886F00CD573B /* BabyTrackerUITests.xctest */,
+				446899891D0D886F00CD573B /* BabyTracker.xctest */,
+				446899941D0D886F00CD573B /* BabyTracker.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 			);
 			name = BabyTrackerTests;
 			productName = BabyTrackerTests;
-			productReference = 446899891D0D886F00CD573B /* BabyTrackerTests.xctest */;
+			productReference = 446899891D0D886F00CD573B /* BabyTracker.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		446899931D0D886F00CD573B /* BabyTrackerUITests */ = {
@@ -441,7 +441,7 @@
 			);
 			name = BabyTrackerUITests;
 			productName = BabyTrackerUITests;
-			productReference = 446899941D0D886F00CD573B /* BabyTrackerUITests.xctest */;
+			productReference = 446899941D0D886F00CD573B /* BabyTracker.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -615,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -653,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -664,10 +664,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BabyTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BabyTracker;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -676,10 +678,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BabyTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BabyTracker;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -691,7 +695,7 @@
 				INFOPLIST_FILE = BabyTrackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BabyTracker;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyTracker.app/BabyTracker";
 			};
 			name = Debug;
@@ -703,7 +707,7 @@
 				INFOPLIST_FILE = BabyTrackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BabyTracker;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyTracker.app/BabyTracker";
 			};
 			name = Release;
@@ -714,7 +718,7 @@
 				INFOPLIST_FILE = BabyTrackerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BabyTracker;
 				TEST_TARGET_NAME = BabyTracker;
 			};
 			name = Debug;
@@ -725,7 +729,7 @@
 				INFOPLIST_FILE = BabyTrackerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BabyTracker;
 				TEST_TARGET_NAME = BabyTracker;
 			};
 			name = Release;

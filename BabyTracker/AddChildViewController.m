@@ -11,14 +11,15 @@
 #import "Child.h"
 #import "ChildManager.h"
 
-@interface AddChildViewController ()
+@interface AddChildViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITextField *childNameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *childSaveActionButton;
 @property (strong, nonatomic) IBOutlet UIDatePicker *childAgePicker;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomPickerConstraint;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomTableView;
 @property (strong, nonatomic) Child* child;
-
+@property (strong, nonatomic) NSArray *list;
 
 @end
 
@@ -32,6 +33,8 @@
     [_childNameTextField addTarget:self action:@selector(textFieldShouldReturn:) forControlEvents:UIControlEventEditingDidEndOnExit];
     _bottomPickerConstraint.constant = -1000;
     _childSaveActionButton.enabled = NO;
+    
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -52,6 +55,21 @@
     _child.birthDate =[formatter stringFromDate:_childAgePicker.date];
     [[ChildManager sharedInstance] addChild:_child];
     [self.navigationController popViewControllerAnimated:YES];
-    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _list.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = nil;
+    
+    
+    
+    cell.textLabel.text = @"";
+    
+    return cell;
+}
 
 @end

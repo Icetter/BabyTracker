@@ -34,9 +34,9 @@
         _list = [NSArray array];
     
     NSDateFormatter* formatter = [NSDateFormatter new];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setDateStyle:NSDateFormatterLongStyle];
     NSString* dateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_measures.measureDate]];
-    NSString* tempString = [NSString stringWithFormat:@"%@ добавлены: рост %@см. и вес %@кг.", dateString, _measures.height, _measures.weight];
+    NSString* tempString = [NSString stringWithFormat:@"%@ added: height %@cm. & weight %@kg.", dateString, _measures.height, _measures.weight];
     _list = [_list arrayByAddingObject:tempString];
     }
 }
@@ -53,8 +53,8 @@
 //            _measures = [Measures new];
 //        }
     _measures = [_manager.child.measures lastObject];
-    _heightLabel.text = [NSString stringWithFormat:@"%@ см.", _measures.height];
-    _weightLabel.text = [NSString stringWithFormat:@"%@ кг.", _measures.weight];
+    _heightLabel.text = [NSString stringWithFormat:@"%@ cm.", _measures.height];
+    _weightLabel.text = [NSString stringWithFormat:@"%@ kg.", _measures.weight];
 }
 
 

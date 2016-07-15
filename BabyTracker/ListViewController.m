@@ -34,15 +34,15 @@
     _stroll = [_manager.child.strolls lastObject];
     
     NSDateFormatter* formatter = [NSDateFormatter new];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setDateStyle:NSDateFormatterLongStyle];
     
     NSString* sleepDateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_sleep.date]];
     NSString* feedDateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_feed.date]];
     NSString* strollDateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_stroll.date]];
     
-    NSString* sleepTempString = [NSString stringWithFormat:@"%@ сон длился: %@", sleepDateString, _sleep.sleepDuration];
-    NSString* feedTempString = [NSString stringWithFormat:@"%@ %@ %@мл.", feedDateString, _feed.foodType, _feed.foodQuantity];
-    NSString* strollTempString = [NSString stringWithFormat:@"%@ прогулка длилась: %@", strollDateString, _stroll.strollDuration];
+    NSString* sleepTempString = [NSString stringWithFormat:@"%@ sleep lasts: %@", sleepDateString, _sleep.sleepDuration];
+    NSString* feedTempString = [NSString stringWithFormat:@"%@ %@ %@ml.", feedDateString, _feed.foodType, _feed.foodQuantity];
+    NSString* strollTempString = [NSString stringWithFormat:@"%@ stroll lasts: %@", strollDateString, _stroll.strollDuration];
     
     
     
