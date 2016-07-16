@@ -34,14 +34,30 @@
 
     self.navigationItem.leftBarButtonItem = _childListBarButton;
     
+
+//    NSString *name = [NSString stringWithFormat:@"%@", _child.dictionary[@"Name"]];
+//    NSLog(@"%@", name);
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
     ChildManager *manager = [ChildManager sharedInstance];
-    _child = manager.childs.firstObject;
-    manager.child = _child;
+    [manager loadChild];
+    _child = manager.child;
     _childNameLabel.text = [NSString stringWithFormat:@"%@", _child.name];
     
+    [self childAge:_child.birthDate];
+    
+    [self reloadInputViews];
+    
+}
+
+- (void)childAge:(NSString*) birthDate{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd.MM.yyyy"];
-    NSDate *date = [formatter dateFromString:_child.birthDate];
+    NSDate *date = [formatter dateFromString:birthDate];
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date toDate:[NSDate date] options:0];
     
@@ -51,7 +67,7 @@
     
     if (day <= 30 && month < 1 && year < 1) {
         _childAgeLabel.text = [NSString stringWithFormat:@"%@ days", @(day)];
-
+        
     }
     if (month >= 1 && year < 1) {
         _childAgeLabel.text = [NSString stringWithFormat:@"%@ months %@ days", @(month), @(day)];
@@ -62,17 +78,12 @@
     if (year > 1) {
         _childAgeLabel.text = [NSString stringWithFormat:@"%@ years %@ months %@ days", @(year), @(month), @(day)];
     }
-    
-
-//    NSString *name = [NSString stringWithFormat:@"%@", _child.dictionary[@"Name"]];
-//    NSLog(@"%@", name);
-    
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [_childNameLabel reloadInputViews];
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:YES];
+//    [_childNameLabel reloadInputViews];
+//}
 
 #pragma mark - Buttons
 

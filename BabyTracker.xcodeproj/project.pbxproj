@@ -35,6 +35,8 @@
 		44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D6AF231D1533F900C12DE4 /* MedicalCardViewController.xib */; };
 		44D914201D275FB800DEE5F0 /* MeasuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D9141E1D275FB800DEE5F0 /* MeasuresViewController.m */; };
 		44D914211D275FB800DEE5F0 /* MeasuresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D9141F1D275FB800DEE5F0 /* MeasuresViewController.xib */; };
+		44DB2BCD1D3A1EA400625613 /* HeaderText.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DB2BCC1D3A1EA400625613 /* HeaderText.m */; };
+		44DB2BCF1D3A1EB800625613 /* HeaderText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44DB2BCE1D3A1EB800625613 /* HeaderText.xib */; };
 		44E95D0D1D1E6501001D5FC3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E95D0B1D1E6501001D5FC3 /* ListViewController.m */; };
 		44E95D0E1D1E6501001D5FC3 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E95D0C1D1E6501001D5FC3 /* ListViewController.xib */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,9 @@
 		44D9141D1D275FB800DEE5F0 /* MeasuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasuresViewController.h; sourceTree = "<group>"; };
 		44D9141E1D275FB800DEE5F0 /* MeasuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasuresViewController.m; sourceTree = "<group>"; };
 		44D9141F1D275FB800DEE5F0 /* MeasuresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeasuresViewController.xib; sourceTree = "<group>"; };
+		44DB2BCB1D3A1EA400625613 /* HeaderText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderText.h; sourceTree = "<group>"; };
+		44DB2BCC1D3A1EA400625613 /* HeaderText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderText.m; sourceTree = "<group>"; };
+		44DB2BCE1D3A1EB800625613 /* HeaderText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderText.xib; sourceTree = "<group>"; };
 		44E95D0A1D1E6501001D5FC3 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		44E95D0B1D1E6501001D5FC3 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		44E95D0C1D1E6501001D5FC3 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
@@ -384,6 +389,9 @@
 				44E95D0A1D1E6501001D5FC3 /* ListViewController.h */,
 				44E95D0B1D1E6501001D5FC3 /* ListViewController.m */,
 				44E95D0C1D1E6501001D5FC3 /* ListViewController.xib */,
+				44DB2BCB1D3A1EA400625613 /* HeaderText.h */,
+				44DB2BCC1D3A1EA400625613 /* HeaderText.m */,
+				44DB2BCE1D3A1EB800625613 /* HeaderText.xib */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -495,6 +503,7 @@
 				44D6AF0B1D15329800C12DE4 /* MainScreenViewController.xib in Resources */,
 				44D6AF1B1D15337E00C12DE4 /* FeedViewController.xib in Resources */,
 				44D6AF101D1532B900C12DE4 /* AddChildViewController.xib in Resources */,
+				44DB2BCF1D3A1EB800625613 /* HeaderText.xib in Resources */,
 				44E95D0E1D1E6501001D5FC3 /* ListViewController.xib in Resources */,
 				446899801D0D886F00CD573B /* Assets.xcassets in Resources */,
 				44D6AF251D1533F900C12DE4 /* MedicalCardViewController.xib in Resources */,
@@ -529,6 +538,7 @@
 				44D6AF141D15331800C12DE4 /* SleepViewController.m in Sources */,
 				44E95D0D1D1E6501001D5FC3 /* ListViewController.m in Sources */,
 				447B7FEC1D2D02F4009B8018 /* Feed.m in Sources */,
+				44DB2BCD1D3A1EA400625613 /* HeaderText.m in Sources */,
 				44D6AF1A1D15337E00C12DE4 /* FeedViewController.m in Sources */,
 				44D6AF0A1D15329800C12DE4 /* MainScreenViewController.m in Sources */,
 				44881AF31D277D8300373A25 /* Child.m in Sources */,
@@ -666,7 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BabyTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTracker;
 				PRODUCT_NAME = BabyTracker;
@@ -680,7 +690,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BabyTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillzhukov.BabyTracker;
 				PRODUCT_NAME = BabyTracker;

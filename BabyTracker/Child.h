@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *birthDate;
+@property (strong, nonatomic) NSDate *creationDate;
 @property (strong, nonatomic) NSMutableArray *sleeps;
 @property (strong, nonatomic) NSMutableArray *feeds;
 @property (strong, nonatomic) NSMutableArray *strolls;

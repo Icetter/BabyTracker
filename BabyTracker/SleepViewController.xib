@@ -39,7 +39,7 @@
                         <action selector="sleepStopActionButton:" destination="-1" eventType="touchUpInside" id="bZG-xV-MAz"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-I9-RkG">
                     <rect key="frame" x="35" y="234" width="250" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="KST-eL-ES9"/>

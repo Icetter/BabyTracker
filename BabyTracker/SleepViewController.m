@@ -20,7 +20,6 @@
 @property (strong, nonatomic) NSDate* stoptDate;
 @property (strong, nonatomic) Sleep* sleep;
 @property (weak, nonatomic) ChildManager *manager;
-@property (nonatomic) BOOL needSave;
 
 @end
 
@@ -28,10 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _needSave = YES;
     _manager = [ChildManager sharedInstance];
-
-   
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -47,8 +43,8 @@
         self.timer = nil;
     }
     if (_startDate) {
-        [self saveSleep];
-        [self saveManager];
+//        [self saveSleep];
+        [self saveCurrentSleep];
     }
 }
 
@@ -56,7 +52,13 @@
 
 - (void)updateTime {
     [self timerFrom:_startDate to:[NSDate date]];
-    [self timeLapsedFrom:_manager.sleep.sleepStop to:[NSDate date]];
+    NSDate* lastSleepDate = ((Sleep *)_manager.child.sleeps.lastObject).sleepStop;
+    if (lastSleepDate) {
+         [self timeLapsedFrom:lastSleepDate to:[NSDate date]];
+    } else {
+        //TODO: show warning
+        
+    }
 }
 
 - (NSString *) stringTimeFrom:(NSDate*) date to:(NSDate*) date2{
@@ -80,10 +82,10 @@
             temp = [NSString stringWithFormat:@"%@ min. %@ sec.",@(minute), @(second)];
         }
         if (hour == 1) {
-            temp = [NSString stringWithFormat:@"%@ hour @% min. %@ sec.", @(hour), @(minute),@(second)];
+            temp = [NSString stringWithFormat:@"%@ hour %@ min. %@ sec.", @(hour), @(minute), @(second)];
         }
         if (hour > 1) {
-            temp = [NSString stringWithFormat:@"%@ hours @% min. %@ sec.", @(hour), @(minute),@(second)];
+            temp = [NSString stringWithFormat:@"%@ hours %@ min. %@ sec.", @(hour), @(minute), @(second)];
         }
         return temp;
         
@@ -106,17 +108,6 @@
 }
 
 - (void)saveSleep {
-    if (!_sleep) {
-        _sleep = [Sleep new];
-    }
-    
-    [_manager.child.sleeps lastObject];
-    
-    _sleep.sleepStart = _startDate;
-    _sleep.sleepStop = _stoptDate;
-    _sleep.date = [NSDate date];
-    _sleep.sleepDuration = [self stringTimeFrom:_sleep.sleepStart to:_sleep.sleepStop];
-    
     [_manager.child.sleeps addObject:_sleep];
     [_manager saveData];
 }
@@ -129,11 +120,18 @@
         _stoptDate = _sleep.sleepStop;
     }
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
-
 }
 
-- (void)saveManager {
-    if (_needSave) {
+- (void)createSleep {
+    if (!_sleep) {
+        _sleep = [Sleep new];
+    }
+    _sleep.sleepStart = _startDate;
+    _sleep.date = [NSDate date];
+}
+
+- (void)saveCurrentSleep {
+    if (_sleep) {
         _manager.sleep = _sleep;
         [_manager saveSleep];
     }
@@ -142,22 +140,19 @@
 #pragma mark - Buttons
 
 - (IBAction)sleepStartActionButton:(id)sender {
-    _needSave = YES;
      NSDate* date = [NSDate date];
     _startDate = date;
-    
+    [self createSleep];
 }
 
 - (IBAction)sleepStopActionButton:(id)sender {
-    NSDate* date = [NSDate date];
-    _needSave = NO;
-    [_manager removeSleep];
-    _stoptDate = date;
+    _sleep.sleepStop = [NSDate date];
+    _sleep.sleepDuration = [self stringTimeFrom:_sleep.sleepStart to:_sleep.sleepStop];
     [self saveSleep];
     _sleep = nil;
+    [_manager removeSleep];
     _timerLabel.text = [NSString stringWithFormat:@"Timer"];
     [self.timer invalidate];
-//    self.timer = nil;
     
 }
 

@@ -49,6 +49,10 @@
                         <constraint firstAttribute="height" constant="250" id="FTc-JJ-57C"/>
                         <constraint firstAttribute="width" constant="250" id="mux-vW-54N"/>
                     </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hPA-L9-fHE"/>
+                        <outlet property="delegate" destination="-1" id="tBz-xx-zd7"/>
+                    </connections>
                 </tableView>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Btr-3W-v5F">
                     <rect key="frame" x="0.0" y="341" width="320" height="227"/>

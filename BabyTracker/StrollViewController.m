@@ -84,10 +84,10 @@
             temp = [NSString stringWithFormat:@"%@ min. %@ sec.",@(minute), @(second)];
         }
         if (hour == 1) {
-            temp = [NSString stringWithFormat:@"%@ hour @% min. %@ sec.", @(hour), @(minute),@(second)];
+            temp = [NSString stringWithFormat:@"%@ hour %@ min. %@ sec.", @(hour), @(minute),@(second)];
         }
         if (hour > 1) {
-            temp = [NSString stringWithFormat:@"%@ hours @% min. %@ sec.", @(hour), @(minute),@(second)];
+            temp = [NSString stringWithFormat:@"%@ hours %@ min. %@ sec.", @(hour), @(minute),@(second)];
         }
         return temp;
         

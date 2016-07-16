@@ -39,6 +39,7 @@
     return @{
              @"Name" : _name,
              @"Age" : _birthDate,
+             @"Creation Date" : _creationDate ? _creationDate : [NSDate date],
              @"Sleeps" : sleepsDict,
              @"Feeds" : feedDict,
              @"Strolls" : strollDict,
@@ -49,6 +50,7 @@
 - (void)updateWithDictionary:(NSDictionary *)dictionary {
     _name = dictionary[@"Name"];
     _birthDate = dictionary[@"Age"];
+    _creationDate = dictionary[@"Creation Date"];
     
     NSArray *sleepList = dictionary[@"Sleeps"];
     NSMutableArray *sleeps = [NSMutableArray new];

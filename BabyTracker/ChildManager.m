@@ -47,12 +47,18 @@
     for (NSDictionary *dict in list) {
         [_childs addObject:[[Child alloc] initWithDictionary:dict]];
     }
-    }
+    [self loadChild];
+}
 
 - (void)saveData {
+    
     NSMutableArray *array = [NSMutableArray new];
     for (Child* child in _childs){
-        [array addObject:child.dictionary];
+        if ([_child.name isEqualToString:child.name]) {
+            [array addObject:_child.dictionary];
+        } else {
+            [array addObject:child.dictionary];
+        }
     }
     BOOL result = [array writeToFile:self.path atomically:YES];
     NSLog(@"%@", @(result) ? @"Saved" : @"Not saved");
@@ -100,6 +106,35 @@
 - (void)removeStroll {
     _stroll = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Current Stroll"];
+}
+
+#pragma mark - Child
+
+- (Child *)searchChildWithName:(NSString *) name {
+    for (Child *childAll in _childs) {
+        if ([childAll.name isEqualToString:name]) {
+            return childAll;
+        }
+    }
+    return nil;
+}
+
+- (void)loadChild {
+    NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Current Child Name"];
+    if (name) {
+        _child = [self searchChildWithName:name];
+    } else {
+        _child = nil;
+    }
+}
+
+- (void)saveChild {
+    [[NSUserDefaults standardUserDefaults] setObject:_child.name forKey:@"Current Child Name"];
+}
+
+- (void)removeChild {
+    _child = nil;
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Current Child Name"];
 }
 
 #pragma mark - Dealloc

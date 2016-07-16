@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Measures* measures;
 @property (weak, nonatomic) ChildManager *manager;
-@property (strong, nonatomic) NSArray *list;
+@property (strong, nonatomic) NSMutableArray *list;
 
 @end
 
@@ -27,18 +27,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _manager = [ChildManager sharedInstance];
     [self updateLabels];
     
     if (_list == nil) {
-        _list = [NSArray array];
-    
-    NSDateFormatter* formatter = [NSDateFormatter new];
-    [formatter setDateStyle:NSDateFormatterLongStyle];
-    NSString* dateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_measures.measureDate]];
-    NSString* tempString = [NSString stringWithFormat:@"%@ added: height %@cm. & weight %@kg.", dateString, _measures.height, _measures.weight];
-    _list = [_list arrayByAddingObject:tempString];
+        _list = [NSMutableArray array];
     }
+    
+    for (int i = 0; i < [_manager.child.measures count]; i++) {
+        _measures = [_manager.child.measures objectAtIndex:i];
+        NSDateFormatter* formatter = [NSDateFormatter new];
+        [formatter setDateStyle:NSDateFormatterLongStyle];
+        NSString* dateString = [NSString stringWithFormat:@"%@", [formatter stringFromDate:_measures.measureDate]];
+        NSString* tempString = [NSString stringWithFormat:@"%@ added: height %@cm. & weight %@kg.", dateString, _measures.height, _measures.weight];
+        [_list addObject:tempString];
+    }
+   
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,7 +53,6 @@
 }
 
 - (void)updateLabels {
-    _manager = [ChildManager sharedInstance];
 //        if (!_measures) {
 //            _measures = [Measures new];
 //        }
@@ -64,8 +68,8 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = nil;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_list objectAtIndex:indexPath.row]];;
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"1"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_list objectAtIndex:indexPath.row]];
     return cell;
 }
 

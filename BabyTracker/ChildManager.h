@@ -30,4 +30,8 @@
 - (void)loadStroll;
 - (void)removeStroll;
 
+- (void)saveChild;
+- (void)loadChild;
+- (void)removeChild;
+
 @end
